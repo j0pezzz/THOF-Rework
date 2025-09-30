@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d85d4837c80094f98f682a545c5e8e, type: 3}
+  m_Name: Attack6
+  m_EditorClassIdentifier: 
+  itemName: Electroshock
+  maxItems: 1
+  image: {fileID: -1531389618408994838, guid: 5fb479cfe27cfa84fa110d712acafe32, type: 3}
+  howMuch: 325
+  isBought: 0
+  isEquip: 0
+  isInv: 0

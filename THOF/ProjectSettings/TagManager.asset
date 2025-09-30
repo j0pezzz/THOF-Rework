@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GrassEnemy1
+  - GrassEnemy2
+  - GrassEnemy3
+  - GrassEnemy4
+  - SIH1
+  - Door1
+  - Shop
+  - Attack1
+  - Attack2
+  - Attack3
+  - water
+  - sandcastle
+  - phone
+  - stick
+  - Attack4
+  - nAttack1
+  - nAttack2
+  - IceEnemy1
+  - IceEnemy2
+  - IceEnemy3
+  - IceEnemy4
+  - SIH2
+  - Attack5
+  - Attack6
+  - Attack7
+  - Attack8
+  - blade
+  - snow
+  - shock
+  - arson
+  - DesertEnemy1
+  - DesertEnemy2
+  - DesertEnemy3
+  - DesertEnemy4
+  - SIH3
+  - MountainEnemy1
+  - MountainEnemy2
+  - MountainEnemy3
+  - MountainEnemy4
+  - SIH4
+  - chest
+  - Coins
+  - Shop2
+  - Shop3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

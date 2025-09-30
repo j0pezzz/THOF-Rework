@@ -28,12 +28,21 @@ public class UIReferences : MonoBehaviour
         StartCoroutine(WaitClose(window, closeTime));
     }
 
-    public void ActivateOpenShop(bool activate)
+    public void ActivateOpenShop()
     {
-        shopText.gameObject.SetActive(activate);
+        shopText.gameObject.SetActive(true);
 
-        string text = activate ? "Close" : "Open";
-        shopText.SetText($"Press E to {text} Shop");
+        shopText.SetText("Press E to Open Shop");
+    }
+
+    public void ActivateCloseShop(bool overrideClose = false)
+    {
+        if (overrideClose)
+        {
+            shopText.gameObject.SetActive(false);
+        }
+        
+        shopText.SetText("Press E to Close Shop");
     }
 
     IEnumerator WaitClose(Window window, float time = 0)

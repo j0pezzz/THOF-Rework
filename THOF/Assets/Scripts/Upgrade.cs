@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
-    moving Mo;
+    PlayerController Mo;
     Stats St;
 
     public Text skillpoints;
@@ -18,7 +18,7 @@ public class Upgrade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Mo = GameObject.Find("Player").GetComponent<moving>();
+        Mo = GameObject.Find("Player").GetComponent<PlayerController>();
         St = GameObject.Find("Player").GetComponent<Stats>();
     }
 

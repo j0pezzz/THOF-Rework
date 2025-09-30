@@ -41,7 +41,7 @@ public static class SaveSystem
 
         if (!File.Exists(dataPath))
         {
-            Debug.Log("No save data found!");
+            Debug.Log("No save data available!");
             return false;
         }
         

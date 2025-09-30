@@ -6,6 +6,7 @@ using Internal.Enums;
 using Runtime.UI.Shop;
 using UnityEngine;
 using UnityEngine.UI;
+using EventHandler = Internal.EventHandler;
 
 public class Shop : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private RectTransform itemContent;
     [SerializeField] private GameObject itemTemplate;
     
-    moving player;
+    PlayerController player;
 
     [HideInInspector]
     public bool isOpen;
@@ -47,15 +48,33 @@ public class Shop : MonoBehaviour
 
     ShopItem _shopItem;
     private List<ShopItem> _items;
-    private Dictionary<string, GameObject> _cacheUI;
+    private readonly Dictionary<string, GameObject> _cacheUI = new();
 
     private void Start()
     {
         _items = GameData.Instance.shopItems; // Cache all items for later use.
-        player = GameObject.Find("Player").GetComponent<moving>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        EventHandler.OnEnterShop += OnEnterShop;
+        EventHandler.OnExitShop += OnExitShop;
     }
 
-    // Update is called once per frame
+    private void OnDisable()
+    {
+        EventHandler.OnEnterShop -= OnEnterShop;
+        EventHandler.OnExitShop -= OnExitShop;
+    }
+
+    void OnEnterShop()
+    {
+        UIReferences.Instance.ActivateOpenShop();
+    }
+    
+    void OnExitShop()
+    {
+        UIReferences.Instance.ActivateCloseShop(true);
+    }
+
     void Update()
     {
         if (!player.inShop) return;
@@ -66,11 +85,29 @@ public class Shop : MonoBehaviour
         }
     }
 
-    void OpenShop()
+    public void OpenShop()
     {
         isOpen = !isOpen;
 
-        if (isOpen && InventoryUI.Instance.isOpen)
+        // If shop is open, initialize items.
+        if (isOpen)
+        {
+            if (InventoryUI.Instance.isOpen)
+            {
+                InventoryUI.Instance.OpenUI();
+            }
+            
+            UIReferences.Instance.ActivateCloseShop();
+            InitializeItems();
+        }
+        else
+        {
+            UIReferences.Instance.ActivateOpenShop();
+        }
+        
+        shopWindowContent.SetActive(isOpen);
+
+        /*if (isOpen && InventoryUI.Instance.isOpen)
         {
             ChangeItems();
             shopWindowContent.SetActive(true);
@@ -87,17 +124,12 @@ public class Shop : MonoBehaviour
         if (isOpen) return;
         
         shopWindowContent.SetActive(false);
-
+        */
     }
 
-    void ChangeItems()
+    void InitializeItems()
     {
-        // Dirty way to clean the UI.
-        foreach (var item in _cacheUI)
-        {
-            Destroy(item.Value);
-            _cacheUI.Remove(item.Key);
-        }
+        CleanShopUI();
         
         if (inShop1)
         {
@@ -115,27 +147,11 @@ public class Shop : MonoBehaviour
                 }
                 
                 shopItemUI.SetItemData(item);
+                itemUI.SetActive(true);
                 _cacheUI.TryAdd(item.itemName, itemUI);
             }
-            
-            /*item1.sprite = charge.image;
-            item1_text.text = charge.itemName + " for " + charge.howMuch + " Coins";
-            item1.tag = "Attack1";
 
-            item2.sprite = castle.image;
-            item2_text.text = castle.itemName + " for " + castle.howMuch + " Coins";
-            item2.tag = "Attack2";
-
-            item1.enabled = true;
-            item1_text.enabled = true;
-            
-            item2.enabled = true;
-            item2_text.enabled = true;
-            
-            item3.enabled = false;
-            item3_text.enabled = false;*/
-
-            Debug.Log("changed items for shop1");
+            Debug.Log("Changed items for Shop 1!");
         }
 
         if (inShop2)
@@ -181,6 +197,25 @@ public class Shop : MonoBehaviour
             item3_text.enabled = true;
 
             Debug.Log("changed items for shop3");
+        }
+    }
+
+    /// <summary>
+    /// Cleans the shop UI from all items.
+    /// </summary>
+    void CleanShopUI()
+    {
+        List<string> itemsToRemove = new();
+        
+        foreach (var item in _cacheUI)
+        {
+            itemsToRemove.Add(item.Key);
+            Destroy(item.Value);
+        }
+
+        foreach (var itemToRemove in itemsToRemove)
+        {
+            _cacheUI.Remove(itemToRemove);
         }
     }
 

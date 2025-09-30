@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 552
     height: 957
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 957
     width: 2168
     height: 336
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 08fbffffd0700000
+      m_ExpandedIDs: 9cd1ffff04edffff18edffff08fbffff507000002e71000084710000847200001a740000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 17.495445, y: 16.862202, z: -0.006749987}
     speed: 2
-    m_Value: {x: 17.49032, y: 16.867378, z: -0.0062999874}
+    m_Value: {x: 17.495445, y: 16.862202, z: -0.006749987}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 1.099029
     speed: 2
-    m_Value: 1.0517024
+    m_Value: 1.099029
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1246,14 +1246,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts/ScriptableObject
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Game Projects\THOF
+  m_LastProjectPath: C:\Users\jopez\Documents\GitHub\THOF-Rework\THOF
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 328b0000
-    m_LastClickedID: 35634
-    m_ExpandedIDs: 00000000f8750000fa750000fc750000
+    m_SelectedIDs: c0870000
+    m_LastClickedID: 34752
+    m_ExpandedIDs: 00000000787500007a7500007c75000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1282,7 +1282,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f8750000fa750000fc750000
+    m_ExpandedIDs: 00000000787500007a7500007c750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

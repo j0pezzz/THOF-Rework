@@ -34,7 +34,7 @@ public class Stats : MonoBehaviour
     public Text hp;
     public Text coinAmount;
 
-    moving move;
+    PlayerController move;
 
 
     // Start is called before the first frame update
@@ -45,7 +45,7 @@ public class Stats : MonoBehaviour
         weaponNameE = "Matchstick";
         hp.text = health.ToString();
 
-        move = GameObject.FindWithTag("Player").GetComponent<moving>();
+        move = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
         health = fullHealth;
     }

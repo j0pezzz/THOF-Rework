@@ -16,6 +16,7 @@ MonoBehaviour:
   maxItems: 1
   image: {fileID: -1531389618408994838, guid: 5fb479cfe27cfa84fa110d712acafe32, type: 3}
   howMuch: 325
+  shopType: 3
   isBought: 0
   isEquip: 0
   isInv: 0

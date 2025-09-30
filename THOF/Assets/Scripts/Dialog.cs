@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,19 +44,13 @@ public class Dialog : MonoBehaviour
     public Text speech;
 
     Battle Ba;
-    moving Mo;
+    PlayerController Mo;
 
     // Start is called before the first frame update
     void Start()
     {
         Ba = GameObject.Find("Manager").GetComponent<Battle>();
-        Mo = GameObject.Find("Player").GetComponent<moving>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Mo = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     public void BoxOn()
@@ -210,7 +202,6 @@ public class Dialog : MonoBehaviour
     }
 
     private static Dialog _instance;
-
     public static Dialog Instance
     {
         get

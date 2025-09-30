@@ -54,7 +54,7 @@ public class InventoryUI : MonoBehaviour
     public Text weaponSpeed;
     public Text weaponHealing;
 
-    moving player;
+    PlayerController player;
 
     public Text equipText;
 
@@ -93,7 +93,7 @@ public class InventoryUI : MonoBehaviour
 
         CheckItems();
 
-        player = GameObject.Find("Player").GetComponent<moving>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     void Update()
@@ -104,38 +104,34 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void OpenUI()
+    public void OpenUI()
     {
         isOpen = !isOpen;
-
-        if (isOpen && Shop.Instance.isOpen)
-        {
-            ui_Anchor.SetActive(true);
-            Shop.Instance.OpenShop(false);
-            player.inAction = true;
-        }
-        else if (isOpen && ChestUI.Instance.isOpen)
-        {
-            ui_Anchor.SetActive(true);
-            ChestUI.Instance.CloseChestUI();
-            player.chestText.text = "Press E To Open Chest";
-            player.inAction = true;
-        }
-        else
-        {
-            ui_Anchor.SetActive(true);
-            player.inAction = true;
-        }
 
         if (!isOpen)
         {
             ui_Anchor.SetActive(false);
             player.inAction = false;
+            return;
+        }
+
+        if (isOpen)
+        {
+            if (Shop.Instance.isOpen)
+            {
+                Shop.Instance.OpenShop();
+            }
+            else if (ChestUI.Instance.isOpen)
+            {
+                ChestUI.Instance.OpenChest();
+            }
+            
+            ui_Anchor.SetActive(true);
+            player.inAction = true;
         }
     }
 
     #region Tabs
-
     public void OpenInventory()
     {
         CloseMainTabs();
@@ -154,23 +150,21 @@ public class InventoryUI : MonoBehaviour
         mapTab.SetActive(true);
     }
 
-    private void CloseMainTabs()
+    void CloseMainTabs()
     {
         upgradeTab.SetActive(false);
         invTab.SetActive(false);
         mapTab.SetActive(false);
     }
 
-
-
-    public void boughtAttacksTab()
+    public void BoughtAttacksTab()
     {
         CloseTabs();
         bAttacksTab.SetActive(true);
         weaponInfo.SetActive(false);
     }
 
-    public void currentAttacksTab()
+    public void CurrentAttacksTab()
     {
         CloseTabs();
         cAttacksTab.SetActive(true);
@@ -182,7 +176,6 @@ public class InventoryUI : MonoBehaviour
         bAttacksTab.SetActive(false);
         cAttacksTab.SetActive(false);
     }
-
     #endregion
 
 
@@ -1806,7 +1799,6 @@ public class InventoryUI : MonoBehaviour
     }
     
     static InventoryUI _instance;
-
     public static InventoryUI Instance
     {
         get

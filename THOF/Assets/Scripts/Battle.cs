@@ -75,7 +75,7 @@ public class Battle : MonoBehaviour
     int enemyAD;
     int enemyAS;
 
-    moving Mo;
+    PlayerController Mo;
     Stats St;
     GrassEnemy Gr;
     GrassEnemy2 Gr2;
@@ -102,7 +102,7 @@ public class Battle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Mo = GameObject.Find("Player").GetComponent<moving>();
+        Mo = GameObject.Find("Player").GetComponent<PlayerController>();
         St = GameObject.Find("Player").GetComponent<Stats>();
         Gr = GameObject.Find("enemy").GetComponent<GrassEnemy>();
         Gr2 = GameObject.Find("enemy2").GetComponent<GrassEnemy2>();

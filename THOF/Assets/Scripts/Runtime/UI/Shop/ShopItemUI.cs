@@ -30,7 +30,7 @@ namespace Runtime.UI.Shop
             buyButton.interactable = false;
             Stats.Instance.coins -= _itemData.howMuch;
             UIReferences.Instance.OpenWindow("Item Bought",$"Bought item {_itemData.itemName}", 3);
-            InventoryUI.Instance.attack1.isBought = true;
+            Stats.Instance.items.Add(_itemData);
             InventoryUI.Instance.CheckItems();
         }
     }

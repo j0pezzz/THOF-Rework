@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canGoIn && Input.GetKeyDown(KeyCode.E))
         {
-            if (in1 == false)
+            if (!in1)
             {
                 in1 = true;
                 player.transform.position = inside.transform.position;

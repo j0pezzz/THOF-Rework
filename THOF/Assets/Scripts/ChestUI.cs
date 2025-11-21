@@ -29,11 +29,11 @@ public class ChestUI : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            OpenChest();
+            ToggleUI();
         }
     }
 
-    public void OpenChest()
+    public void ToggleUI()
     {
         isOpen = !isOpen;
 
@@ -41,7 +41,7 @@ public class ChestUI : MonoBehaviour
         {
             if (InventoryUI.Instance.isOpen)
             {
-                InventoryUI.Instance.OpenUI();
+                InventoryUI.Instance.ToggleUI();
             }
             
             transform.GetChild(0).gameObject.SetActive(true);

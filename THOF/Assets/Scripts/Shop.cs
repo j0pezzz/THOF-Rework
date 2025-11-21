@@ -13,8 +13,6 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject shopWindowContent;
     [SerializeField] private RectTransform itemContent;
     [SerializeField] private GameObject itemTemplate;
-    
-    PlayerController player;
 
     [HideInInspector]
     public bool isOpen;
@@ -53,7 +51,6 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         _items = GameData.Instance.shopItems; // Cache all items for later use.
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         EventHandler.OnEnterShop += OnEnterShop;
         EventHandler.OnExitShop += OnExitShop;
@@ -77,15 +74,15 @@ public class Shop : MonoBehaviour
 
     void Update()
     {
-        if (!player.inShop) return;
+        if (!PlayerController.Instance.inShop) return;
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            OpenShop();
+            ToggleUI();
         }
     }
 
-    public void OpenShop()
+    public void ToggleUI()
     {
         isOpen = !isOpen;
 
@@ -94,7 +91,7 @@ public class Shop : MonoBehaviour
         {
             if (InventoryUI.Instance.isOpen)
             {
-                InventoryUI.Instance.OpenUI();
+                InventoryUI.Instance.ToggleUI();
             }
             
             UIReferences.Instance.ActivateCloseShop();
@@ -106,25 +103,6 @@ public class Shop : MonoBehaviour
         }
         
         shopWindowContent.SetActive(isOpen);
-
-        /*if (isOpen && InventoryUI.Instance.isOpen)
-        {
-            ChangeItems();
-            shopWindowContent.SetActive(true);
-            InventoryUI.Instance.ui_Anchor.SetActive(false);
-            InventoryUI.Instance.isOpen = false;
-            player.inAction = false;
-        }
-        else
-        {
-            ChangeItems();
-            shopWindowContent.SetActive(true);
-        }
-
-        if (isOpen) return;
-        
-        shopWindowContent.SetActive(false);
-        */
     }
 
     void InitializeItems()

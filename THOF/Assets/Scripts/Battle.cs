@@ -99,7 +99,6 @@ public class Battle : MonoBehaviour
     SIH4 S4;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         Mo = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -125,17 +124,16 @@ public class Battle : MonoBehaviour
         Mo4 = GameObject.Find("enemy16").GetComponent<MountainEnemy4>();
         S4 = GameObject.Find("Semi Iso Herra4").GetComponent<SIH4>();
 
-        attack1.text = St.weaponName1;
-        attack2.text = St.weaponName2;
-        attackE.text = St.weaponNameE;
+        //attack1.text = St.weaponName1;
+        //attack2.text = St.weaponName2;
+        //attackE.text = St.weaponNameE;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        attack1.text = St.weaponName1;
-        attack2.text = St.weaponName2;
-        attackE.text = St.weaponNameE;
+        //attack1.text = St.weaponName1;
+        //attack2.text = St.weaponName2;
+        //attackE.text = St.weaponNameE;
 
         CheckHealth();
     }
@@ -900,7 +898,8 @@ public class Battle : MonoBehaviour
 
     IEnumerator Attack1()
     {
-        if (St.realSpeed >= enemyAS)
+        yield return null;
+        /*if (St.realSpeed >= enemyAS)
         {
             enemyHP -= St.realStrenght;
             yield return new WaitForSeconds(1);
@@ -924,13 +923,13 @@ public class Battle : MonoBehaviour
             }
 
             isAttacking = false;
-        }
-        
+        }*/
     }
 
     IEnumerator Attack2()
     {
-        if (St.realSpeed2 >= enemyAS)
+        yield return null;
+        /*if (St.realSpeed2 >= enemyAS)
         {
             enemyHP -= St.realStrenght2;
             yield return new WaitForSeconds(1);
@@ -954,12 +953,13 @@ public class Battle : MonoBehaviour
             }
 
             isAttacking = false;
-        }
+        }*/
     }
 
     IEnumerator AttackE()
     {
-        if (St.realSpeedE >= enemyAS)
+        yield return null;
+        /*if (St.realSpeedE >= enemyAS)
         {
             enemyHP -= St.realStrenghtE;
 
@@ -1003,7 +1003,7 @@ public class Battle : MonoBehaviour
             }
 
             isAttacking = false;
-        }
+        }*/
     }
 
     private static Battle _instance;

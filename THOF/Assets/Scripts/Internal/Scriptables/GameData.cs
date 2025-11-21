@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     public List<ShopItem> shopItems;
+    public List<ShopItem> startingItems;
 
     private static GameData _instance;
 

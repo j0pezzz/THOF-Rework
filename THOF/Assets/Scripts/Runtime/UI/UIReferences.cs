@@ -8,6 +8,7 @@ public class UIReferences : MonoBehaviour
 {
     [SerializeField] private List<Window> windows;
     [SerializeField] private TextMeshProUGUI shopText;
+    [SerializeField] private TextMeshProUGUI equipText;
 
     public void OpenWindow(string windowName, string text = "", float closeTime = 0)
     {
@@ -25,7 +26,7 @@ public class UIReferences : MonoBehaviour
         }
         
         window.WindowRoot.SetActive(true);
-        StartCoroutine(WaitClose(window, closeTime));
+        StartCoroutine(WaitClose(window.WindowRoot, closeTime));
     }
 
     public void ActivateOpenShop()
@@ -45,11 +46,19 @@ public class UIReferences : MonoBehaviour
         shopText.SetText("Press E to Close Shop");
     }
 
-    IEnumerator WaitClose(Window window, float time = 0)
+    IEnumerator WaitClose(GameObject window, float time = 0)
     {
         if (time > 0) yield return new WaitForSeconds(time);
         
-        window.WindowRoot.SetActive(false);
+        window.SetActive(false);
+    }
+
+    public void ShowWeaponEquip(string text)
+    {
+        equipText.gameObject.SetActive(true);
+        equipText.SetText(text);
+
+        StartCoroutine(WaitClose(equipText.gameObject, 2));
     }
 
     static UIReferences _instance;

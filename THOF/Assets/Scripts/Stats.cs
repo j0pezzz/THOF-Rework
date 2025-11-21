@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +10,6 @@ public class Stats : MonoBehaviour
     public int speed = 0;
     public int strenght = 0;
     public int healing = 0;
-    public int realSpeed;
-    public int realStrenght;
-    public int realSpeed2;
-    public int realStrenght2;
-    public int realSpeedE;
-    public int realStrenghtE;
-    public int realHealingE;
     public int level = 1;
     public int xp = 0;
     public int ofWhatXp = 10;
@@ -27,35 +21,24 @@ public class Stats : MonoBehaviour
     public int strenghtSPN;
     public int healingSPN;
 
-    public string weaponName1;
-    public string weaponName2;
-    public string weaponNameE;
-
     public Text hp;
     public Text coinAmount;
 
-    PlayerController move;
+    public List<ShopItem> items = new();
+    public List<ShopItem> equippedItems = new();
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        weaponName1 = "Eagle punch";
-        weaponName2 = "Eagle kick";
-        weaponNameE = "Matchstick";
-        hp.text = health.ToString();
-
-        move = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        equippedItems = new List<ShopItem>(GameData.Instance.startingItems);
 
         health = fullHealth;
+        hp.text = health.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         LevelUp();
         Skillpointsneeded();
-        CardCollection();
         NegativeHealth();
         hp.text = health.ToString();
         coinAmount.text = coins.ToString();
@@ -181,91 +164,6 @@ public class Stats : MonoBehaviour
         }
     }
 
-    void CardCollection()
-    {
-        if (weaponName1 == "Eagle punch")
-        {
-            realSpeed = speed + 3;
-            realStrenght = strenght + 3;
-        }
-
-        if (weaponName2 == "Eagle punch")
-        {
-            realSpeed2 = speed + 3;
-            realStrenght2 = strenght + 3;
-        }
-
-        if (weaponName1 == "Eagle kick")
-        {
-            realSpeed = speed + 7;
-            realStrenght = strenght + 2;
-        }
-
-        if (weaponName2 == "Eagle kick")
-        {
-            realSpeed2 = speed + 7;
-            realStrenght2 = strenght + 2;
-        }
-
-        if (weaponNameE == "Matchstick")
-        {
-            realSpeedE = speed + 6;
-            realStrenghtE = strenght + 2;
-            realHealingE = 0;
-        }
-
-        if (weaponNameE == "Sandcastle")
-        {
-            realSpeedE = speed + 2;
-            realStrenghtE = strenght + 4;
-            realHealingE = 0;
-        }
-
-        if (weaponNameE == "Phone charger")
-        {
-            realSpeedE = speed + 8;
-            realStrenghtE = strenght + 1;
-            realHealingE = healing + 1;
-        }
-
-        if (weaponNameE == "Water gun")
-        {
-            realSpeedE = speed + 4;
-            realStrenghtE = strenght + 3;
-            realHealingE = 0;
-        }
-
-        if (weaponNameE == "Weed Blade")
-        {
-            realSpeedE = speed + 1;
-            realStrenghtE = strenght + 3;
-            realHealingE = 0;
-        }
-
-        if(weaponNameE == "Electroshock")
-        {
-            realSpeedE = speed + 8;
-            realStrenghtE = strenght + 4;
-            realHealingE = 0;
-        }
-
-        if(weaponNameE == "Snowball")
-        {
-            realSpeedE = speed + 8;
-            realStrenghtE = strenght + 2;
-            realHealingE = healing + 2;
-        }
-
-        if(weaponNameE == "Lil Arson")
-        {
-            realSpeedE = speed + 4;
-            realStrenghtE = strenght + 4;
-            realHealingE = 0;
-        }
-
-
-    }
-
     void NegativeHealth()
     {
         if (health < 0)
@@ -275,12 +173,11 @@ public class Stats : MonoBehaviour
     }
 
     private static Stats _instance;
-
     public static Stats Instance
     {
         get
         {
-            if (_instance == null) _instance = FindAnyObjectByType<Stats>();
+            if (!_instance) _instance = FindAnyObjectByType<Stats>();
             return _instance;
         }
     }

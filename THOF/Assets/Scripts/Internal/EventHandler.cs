@@ -11,5 +11,11 @@ namespace Internal
         public static Action OnExitShop;
 
         public static void DispatchExitShop() => OnExitShop?.Invoke();
+
+        public static class Player
+        {
+            public static Action OnLevelUp;
+            public static void DispatchLevelUp() => OnLevelUp?.Invoke();
+        }
     }
 }

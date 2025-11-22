@@ -1,4 +1,6 @@
 using Internal;
+using Internal.Enums;
+using Internal.Structures;
 using UnityEngine;
 using UnityEngine.UI;
 using Internal.Structures.Save_System;
@@ -18,7 +20,6 @@ public class PlayerController : MonoBehaviour
     public Transform outside;
     public Transform inside;
     public GameObject player;
-    public GameObject vittu;
 
     Rigidbody2D _rb;
     Animator _animator;
@@ -50,6 +51,27 @@ public class PlayerController : MonoBehaviour
         CamFollow();
         Door();
         Person();
+        InteractWithEnemy();
+    }
+
+    void InteractWithEnemy()
+    {
+        // If we are near an enemy and not yet in action.
+        if (!nearEnemy || inAction) return;
+
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+        
+        inAction = true;
+        UIReferences.Instance.ShowInteract(false);
+        Dialog.Instance.BoxOn();
+    }
+    
+    void Person()
+    {
+        if (!nearEnemy && !canGoIn && canGoOut)
+        {
+            UIReferences.Instance.ShowInteract(false);
+        }
     }
 
     public void SavePlayer()
@@ -76,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + _movement * moveSpeed * Time.fixedDeltaTime);
+        _rb.MovePosition(_rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
 
         if (!inAction)
         {
@@ -97,7 +119,7 @@ public class PlayerController : MonoBehaviour
             {
                 in1 = true;
                 player.transform.position = inside.transform.position;
-                vittu.SetActive(false);
+                UIReferences.Instance.ShowInteract(false);
                 canGoIn = false;
             }  
         }
@@ -108,7 +130,7 @@ public class PlayerController : MonoBehaviour
         
         in1 = false;
         player.transform.position = outside.transform.position;
-        vittu.SetActive(false);
+        UIReferences.Instance.ShowInteract(false);
         canGoOut = false;
     }
 
@@ -119,139 +141,28 @@ public class PlayerController : MonoBehaviour
             if (!in1)
             {
                 canGoIn = true;
-                vittu.SetActive(true);
+                UIReferences.Instance.ShowInteract(true);
             }
             
             if (in1)
             {
                 canGoOut = true;
-                vittu.SetActive(true);
+                UIReferences.Instance.ShowInteract(true);
             }
         }
 
-        #region Enemies
+        if (collision.transform.TryGetComponent(out EnemyBase enemyBase))
+        {
+            nearEnemy = true;
+            Debug.Log("Enemy found");
+            enemyBase.CheckEnemyFightStatus();
+            Dialog.Instance.SetEnemyIcon(enemyBase.EnemySprite);
+            Battle.Instance.SetEnemy(enemyBase);
+            UIReferences.Instance.ShowInteract(true);
+        }
+
         switch (collision.tag)
         {
-            case "GrassEnemy1":
-                Battle.Instance.isEnemy1 = true;
-                Battle.Instance.eIconK1.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isGr1 = true;
-                break;
-            case "GrassEnemy2":
-                Battle.Instance.isEnemy2 = true;
-                Battle.Instance.eIconK1.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isGr2 = true;
-                break;
-            case "GrassEnemy3":
-                Battle.Instance.isEnemy3 = true;
-                Battle.Instance.eIconK1.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isGr3 = true;
-                break;
-            case "GrassEnemy4":
-                Battle.Instance.isEnemy4 = true;
-                Battle.Instance.eIconK1.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isGr4 = true;
-                break;
-            case "IceEnemy1":
-                Battle.Instance.isEnemy5 = true;
-                Battle.Instance.eIconK4.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isIc1 = true;
-                break;
-            case "IceEnemy2":
-                Battle.Instance.isEnemy6 = true;
-                Battle.Instance.eIconK4.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isIc2 = true;
-                break;
-            case "IceEnemy3":
-                Battle.Instance.isEnemy7 = true;
-                Battle.Instance.eIconK4.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isIc3 = true;
-                break;
-            case "IceEnemy4":
-                Battle.Instance.isEnemy8 = true;
-                Battle.Instance.eIconK4.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isIc4 = true;
-                break;
-            case "DesertEnemy1":
-                Battle.Instance.isEnemy9 = true;
-                Battle.Instance.eIconK3.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isDe1 = true;
-                break;
-            case "DesertEnemy2":
-                Battle.Instance.isEnemy10 = true;
-                Battle.Instance.eIconK3.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isDe2 = true;
-                break;
-            case "DesertEnemy3":
-                Battle.Instance.isEnemy11 = true;
-                Battle.Instance.eIconK3.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isDe3 = true;
-                break;
-            case "DesertEnemy4":
-                Battle.Instance.isEnemy12 = true;
-                Battle.Instance.eIconK3.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isDe4 = true;
-                break;
-            case "MountainEnemy1":
-                Battle.Instance.isEnemy13 = true;
-                Battle.Instance.eIconK2.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isMo1 = true;
-                break;
-            case "MountainEnemy2":
-                Battle.Instance.isEnemy14 = true;
-                Battle.Instance.eIconK2.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isMo2 = true;
-                break;
-            case "MountainEnemy3":
-                Battle.Instance.isEnemy15 = true;
-                Battle.Instance.eIconK2.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isMo3 = true;
-                break;
-            case "MountainEnemy4":
-                Battle.Instance.isEnemy16 = true;
-                Battle.Instance.eIconK2.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isMo4 = true;
-                break;
-            case "SIH1":
-                Battle.Instance.isSIH1 = true;
-                Battle.Instance.eIconSIH1.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isSIH1 = true;
-                break;
-            case "SIH2":
-                Battle.Instance.isSIH2 = true;
-                Battle.Instance.eIconSIH2.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isSIH2 = true;
-                break;
-            case "SIH3":
-                Battle.Instance.isSIH3 = true;
-                Battle.Instance.eIconSIH3.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isSIH3 = true;
-                break;
-            case "SIH4":
-                Battle.Instance.isSIH4 = true;
-                Battle.Instance.eIconSIH4.SetActive(true);
-                nearEnemy = true;
-                Dialog.Instance.isSIH4 = true;
-                break;
             case "Shop":
                 EventHandler.DispatchEnterShop();
                 inShop = true;
@@ -272,15 +183,19 @@ public class PlayerController : MonoBehaviour
                 inChest = true;
                 break;
         }
-
-        #endregion
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         canGoIn = false;
         canGoOut = false;
-        vittu.SetActive(false);
+        UIReferences.Instance.ShowInteract(false);
+
+        if (other.transform.root.TryGetComponent(out EnemyBase enemyBase))
+        {
+            Debug.Log("No longer in enemy radius");
+            nearEnemy = false;
+        }
 
         switch (other.tag)
         {
@@ -308,107 +223,6 @@ public class PlayerController : MonoBehaviour
                 chestText.text = "Press E to Open Chest";
                 inChest = false;
                 break;
-            case "GrassEnemy1":
-                nearEnemy = false;
-                Dialog.Instance.isGr1 = false;
-                break;
-            case "GrassEnemy2":
-                nearEnemy = false;
-                Dialog.Instance.isGr2 = false;
-                break;
-            case "GrassEnemy3":
-                nearEnemy = false;
-                Dialog.Instance.isGr3 = false;
-                break;
-            case "GrassEnemy4":
-                nearEnemy = false;
-                Dialog.Instance.isGr4 = false;
-                break;
-            case "IceEnemy1":
-                nearEnemy = false;
-                Dialog.Instance.isIc1 = false;
-                break;
-            case "IceEnemy2":
-                nearEnemy = false;
-                Dialog.Instance.isIc2 = false;
-                break;
-            case "IceEnemy3":
-                nearEnemy = false;
-                Dialog.Instance.isIc3 = false;
-                break;
-            case "IceEnemy4":
-                nearEnemy = false;
-                Dialog.Instance.isIc4 = false;
-                break;
-            case "DesertEnemy1":
-                nearEnemy = false;
-                Dialog.Instance.isDe1 = false;
-                break;
-            case "DesertEnemy2":
-                nearEnemy = false;
-                Dialog.Instance.isDe2 = false;
-                break;
-            case "DesertEnemy3":
-                nearEnemy = false;
-                Dialog.Instance.isDe3 = false;
-                break;
-            case "DesertEnemy4":
-                nearEnemy = false;
-                Dialog.Instance.isDe4 = false;
-                break;
-            case "MountainEnemy1":
-                nearEnemy = false;
-                Dialog.Instance.isMo1 = false;
-                break;
-            case "MountainEnemy2":
-                nearEnemy = false;
-                Dialog.Instance.isMo2 = false;
-                break;
-            case "MountainEnemy3":
-                nearEnemy = false;
-                Dialog.Instance.isMo3 = false;
-                break;
-            case "MountainEnemy4":
-                nearEnemy = false;
-                Dialog.Instance.isMo4 = false;
-                break;
-            case "SIH1":
-                nearEnemy = false;
-                Dialog.Instance.isSIH1 = false;
-                break;
-            case "SIH2":
-                nearEnemy = false;
-                Dialog.Instance.isSIH2 = false;
-                break;
-            case "SIH3":
-                nearEnemy = false;
-                Dialog.Instance.isSIH3 = false;
-                break;
-            case "SIH4":
-                nearEnemy = false;
-                Dialog.Instance.isSIH4 = false;
-                break;
-        }
-    }
-
-    void Person()
-    {
-        if (nearEnemy && inAction == false)
-        {
-            vittu.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                inAction = true;
-                vittu.SetActive(false);
-                Dialog.Instance.BoxOn();
-                Dialog.Instance.WhoIsIt();
-            }
-        }
-
-        if (!nearEnemy && !canGoIn && canGoOut)
-        {
-            vittu.SetActive(false);
         }
     }
 

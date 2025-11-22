@@ -9,6 +9,7 @@ public class UIReferences : MonoBehaviour
     [SerializeField] private List<Window> windows;
     [SerializeField] private TextMeshProUGUI shopText;
     [SerializeField] private TextMeshProUGUI equipText;
+    [SerializeField] private TextMeshProUGUI interactText;
 
     public void OpenWindow(string windowName, string text = "", float closeTime = 0)
     {
@@ -60,6 +61,8 @@ public class UIReferences : MonoBehaviour
 
         StartCoroutine(WaitClose(equipText.gameObject, 2));
     }
+
+    public void ShowInteract(bool active) => interactText.gameObject.SetActive(active);
 
     static UIReferences _instance;
 

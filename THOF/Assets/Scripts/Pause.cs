@@ -1,10 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public AudioSource mSource;
+    [SerializeField] private GameObject content;
+    [SerializeField] AudioSource aSource;
 
     bool _isPaused;
 
@@ -16,42 +16,22 @@ public class Pause : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Paused();
+            TogglePause();
         }
     }
 
-    public void Paused()
+    public void TogglePause()
     {
         _isPaused = !_isPaused;
-
-        if (_isPaused)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-            mSource.mute = true;
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-            mSource.mute = false;
-            Time.timeScale = 1f;
-        }
+        
+        content.SetActive(_isPaused);
+        aSource.mute = _isPaused;
+        Time.timeScale = _isPaused ? 0 : 1;
     }
 
-    public void GoMenu() => SceneManager.LoadScene(0);
-    
-    static Pause _instance;
-
-    public static Pause Instance
-    {
-        get
-        {
-            if (_instance == null) _instance = FindAnyObjectByType<Pause>();
-            return _instance;
-        }
-    }
+    public void GoToMainMenu() => SceneManager.LoadScene(0);
 }

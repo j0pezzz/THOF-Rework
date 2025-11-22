@@ -60,6 +60,7 @@ public class InventoryUI : MonoBehaviour
         }
 
         ui_Anchor.SetActive(true);
+        OpenInventoryWindow(0); //TODO: currently we always open the first inventory window
         PlayerController.Instance.inAction = true;
     }
 
@@ -96,6 +97,22 @@ public class InventoryUI : MonoBehaviour
         if (window == null)
         {
             Debug.LogWarning($"No inventory window found with name {windowName}");
+            return;
+        }
+
+        _currentInventoryWindow = window;
+        window.WindowRoot.SetActive(true);
+    }
+    
+    void OpenInventoryWindow(int windowIndex)
+    {
+        CloseCurrentInventoryWindow(); // Try to close current window always
+
+        Window window = inventoryWindows[windowIndex];
+
+        if (window == null)
+        {
+            Debug.LogWarning($"No inventory window found with index {windowIndex}");
             return;
         }
 

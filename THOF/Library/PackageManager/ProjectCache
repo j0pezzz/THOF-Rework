@@ -5,29 +5,29 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638991054220000000
-    m_Hash: 2095800230
+      ticks: 638994068040000000
+    m_Hash: 371111288
   m_LockFileStatus:
     m_FilePath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638991067490000000
-    m_Hash: 3922767277
+      ticks: 638994068040000000
+    m_Hash: 3345072018
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages
-m_EditorVersion: 6000.0.61f1 (74a0adb02c31)
+m_EditorVersion: 6000.2.13f1 (abdb44fca7f7)
 m_ResolvedPackages:
-- packageId: com.unity.2d.animation@12.0.2
+- packageId: com.unity.2d.animation@12.0.3
   testable: 0
   isDirectDependency: 1
-  version: 12.0.2
+  version: 12.0.3
   source: 1
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.animation@34e0443c58ed
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.animation@fd6eeea117b7
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -191,9 +191,9 @@ m_ResolvedPackages:
     - 14.0.1
     - 14.0.2
     compatible:
-    - 10.2.1
-    - 10.2.2
-    recommended: 10.2.2
+    - 12.0.2
+    - 12.0.3
+    recommended: 12.0.3
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -227,6 +227,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   - name: com.unity.collections
     version: 2.6.2
   - name: com.unity.test-framework
@@ -255,35 +257,37 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638863413369980000
+  datePublishedTicks: 638990359720900000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.animation@12.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: b0c25ab984f22def61409df195e4e0b210863e0d
+    revision: 27cd1e98fa94b5cc24ba387dd70ec2493491c485
     path: 
   unityLifecycle:
-    version: 10.2.1
+    version: 12.0.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fix the icon quality of Sprite Swap Overlay
-    Window. (DANB-988)\n- Fix NullReferenceException error thrown by the Sprite Library
-    Editor window when entering Play Mode with Game View maximised (DANB-1019)"}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed Dynamic-Batching / Skinning is broken.
+    (DANB-1037)\n- Fix unresponsive scrolling in Sprite Library Editor grid view
+    after adding multiple labels. (DANB-1091)\n- Fix bone drag and drop to preserve
+    skeleton-wide order in Visibility window. (DANB-1120)"}'
   assetStore:
     productId: 
-  fingerprint: 34e0443c58ed65e66d21023245d2862e066ab2e7
+  fingerprint: fd6eeea117b7165f48ae1442d07c9a10c4d757f3
   editorCompatibility:
-    compatibilityLevel: 2
-    minimumPackageVersion: 10.2.1
-    minimumUnityVersion: 6000.2.0b4
+    compatibilityLevel: 0
+    minimumPackageVersion: 12.0.2
+    minimumUnityVersion: 6000.2.0a1
   compliance:
     status: 0
     violation:
@@ -338,10 +342,9 @@ m_ResolvedPackages:
     - 5.1.0
     - 5.1.1
     compatible:
-    - 5.0.3
     - 5.1.0
     - 5.1.1
-    recommended: 5.0.3
+    recommended: 5.1.1
     deprecated: []
   dependencies:
   - name: com.unity.modules.imgui
@@ -378,11 +381,12 @@ m_ResolvedPackages:
     revision: 9ead9de91ee9fdb290bfcc223d793a449e7f8370
     path: 
   unityLifecycle:
-    version: 5.0.3
+    version: 5.1.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -395,7 +399,7 @@ m_ResolvedPackages:
   fingerprint: 09d99455b9018d7a152bb766d42b2569236a7b4a
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 5.0.3
+    minimumPackageVersion: 5.1.0
     minimumUnityVersion: 2021.3.0a1
   compliance:
     status: 0
@@ -403,12 +407,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.2d.psdimporter@11.0.1
+- packageId: com.unity.2d.psdimporter@11.0.2
   testable: 0
   isDirectDependency: 1
-  version: 11.0.1
+  version: 11.0.2
   source: 1
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.psdimporter@0adcab25a8fd
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.psdimporter@ee412f80a276
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -520,9 +524,9 @@ m_ResolvedPackages:
     - 13.0.0
     - 13.0.1
     compatible:
-    - 9.1.0
-    - 9.1.1
-    recommended: 9.1.1
+    - 11.0.1
+    - 11.0.2
+    recommended: 11.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -552,6 +556,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   - name: com.unity.2d.tilemap
     version: 1.0.0
   - name: com.unity.modules.tilemap
@@ -577,34 +583,35 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638854007431340000
+  datePublishedTicks: 638986145935560000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.psdimporter@11.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: baf565843471dd3cdc28af4c2a2aa0357ab1f9b1
+    revision: f3e71802c8fda959b3c171e2d19010c1af6647f2
     path: 
   unityLifecycle:
-    version: 9.1.0
+    version: 11.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Replaced deprecated non-generic IMGUI
-    TreeViewItem. (Case DANB-1004)\n- Fixed case Layer Separation toggle icon is
-    invisible when the icon state is \"separated\" with mousedown. (Case DANB-949)"}'
+  upmReserved: '{"changelog":"### Changed\n- Exclude empty layers from import.\n\n###
+    Fixed\n- Fix null reference exception occurs when importing psd without visible
+    layers. (DANB-1155)\n- Correct layer mask position relative to its layer. (DANB-1177)"}'
   assetStore:
     productId: 
-  fingerprint: 0adcab25a8fd3537d5829f344f6e2aa236d0cf8e
+  fingerprint: ee412f80a276d6ee7acd681b5661a959561261be
   editorCompatibility:
-    compatibilityLevel: 2
-    minimumPackageVersion: 9.1.0
+    compatibilityLevel: 0
+    minimumPackageVersion: 11.0.1
     minimumUnityVersion: 6000.2.0a10
   compliance:
     status: 0
@@ -617,7 +624,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.sprite@40af95610cd4
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.sprite@ec779eb7e23a
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -672,6 +679,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -680,7 +688,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 40af95610cd42dda7036338d3ab9e05b8e1f731e
+  fingerprint: ec779eb7e23a28a2548503f223b3ca124d5d91db
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -691,12 +699,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.2d.spriteshape@12.0.1
+- packageId: com.unity.2d.spriteshape@12.0.2
   testable: 0
   isDirectDependency: 1
-  version: 12.0.1
+  version: 12.0.2
   source: 1
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.spriteshape@1d246726c231
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.spriteshape@f4325e58176b
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -813,9 +821,9 @@ m_ResolvedPackages:
     - 13.0.0
     - 14.0.0
     compatible:
-    - 10.0.7
-    - 10.1.0
-    recommended: 10.0.7
+    - 12.0.1
+    - 12.0.2
+    recommended: 12.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -845,6 +853,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -869,33 +879,34 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638863413324610000
+  datePublishedTicks: 638990359691390000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.spriteshape@12.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: b0c25ab984f22def61409df195e4e0b210863e0d
+    revision: 27cd1e98fa94b5cc24ba387dd70ec2493491c485
     path: 
   unityLifecycle:
-    version: 10.0.7
+    version: 12.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- UUM-104210 Added option to disable Auto-Update
-    which avoids runtime cost to check for Changes."}'
+  upmReserved: '{"changelog":"### Changed\n- Updated Spriteshape extras to use new
+    InputSystem."}'
   assetStore:
     productId: 
-  fingerprint: 1d246726c2316e2e6dd7d2aefba54ec6640affa9
+  fingerprint: f4325e58176b754d8b01f2936fa8cc95e464f2c1
   editorCompatibility:
-    compatibilityLevel: 2
-    minimumPackageVersion: 10.0.7
+    compatibilityLevel: 0
+    minimumPackageVersion: 12.0.1
     minimumUnityVersion: 6000.2.0a10
   compliance:
     status: 0
@@ -908,7 +919,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@3a9e87d65d4c
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@dadfd5fd938d
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -948,6 +959,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   keywords:
   - 2d
   - Tilemap
@@ -980,6 +993,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -988,7 +1002,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 3a9e87d65d4c5aa5a9281dcba06307dc07bdd524
+  fingerprint: dadfd5fd938d2dd03f2361f0bec8d320424d2d63
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -1101,6 +1115,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1241,6 +1256,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1301,6 +1317,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   keywords:
   - Multiplayer
   - Netcode
@@ -1335,6 +1353,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1359,7 +1378,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.6.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework@d74e8e2cf45a
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework@ec3b9352d485
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1424,6 +1443,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1432,7 +1452,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: d74e8e2cf45a531fcd477d1091456e7e86b24f36
+  fingerprint: ec3b9352d4857ad21949bab695ad12ab73fc6af6
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.6.0
@@ -1609,6 +1629,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1731,6 +1752,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1755,7 +1777,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@3d2113156146
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@fe9df2e66331
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1826,6 +1848,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1834,7 +1857,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 3d211315614653004e3f781ec612e954958d0de4
+  fingerprint: fe9df2e6633125e9febf92b2d5307736138bcc37
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -1850,7 +1873,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1902,6 +1925,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -1926,7 +1950,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1978,6 +2002,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2002,7 +2027,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -2053,6 +2078,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2077,7 +2103,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -2129,6 +2155,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2153,7 +2180,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -2205,6 +2232,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2229,7 +2257,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -2281,86 +2309,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.cloth@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.cloth
-  assetPath: Packages/com.unity.modules.cloth
-  name: com.unity.modules.cloth
-  displayName: Cloth
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Cloth module implements cloth physics simulation through the
-    Cloth component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ClothModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2385,7 +2334,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.director
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2445,6 +2394,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2469,7 +2419,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2521,6 +2471,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2545,7 +2496,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2597,6 +2548,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2621,7 +2573,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2673,6 +2625,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2697,7 +2650,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2749,6 +2702,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2773,7 +2727,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2825,6 +2779,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -2849,7 +2804,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2901,86 +2856,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.screencapture@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.screencapture
-  assetPath: Packages/com.unity.modules.screencapture
-  name: com.unity.modules.screencapture
-  displayName: Screen Capture
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The ScreenCapture module provides functionality to take screen shots
-    using the ScreenCapture class. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.ScreenCaptureModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.imageconversion
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3005,7 +2881,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -3057,6 +2933,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3081,7 +2958,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -3141,6 +3018,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3165,7 +3043,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -3220,6 +3098,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3244,7 +3123,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -3296,6 +3175,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3320,7 +3200,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3349,6 +3229,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   resolvedDependencies:
   - name: com.unity.modules.ui
     version: 1.0.0
@@ -3357,6 +3239,8 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
+    version: 1.0.0
+  - name: com.unity.modules.physics
     version: 1.0.0
   keywords: []
   registry:
@@ -3388,6 +3272,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3412,7 +3297,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3464,6 +3349,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3488,7 +3374,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3547,6 +3433,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3571,7 +3458,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3623,6 +3510,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3647,7 +3535,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3707,6 +3595,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3731,7 +3620,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3791,6 +3680,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3815,7 +3705,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3875,6 +3765,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -3899,7 +3790,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3975,508 +3866,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.vehicles@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vehicles
-  assetPath: Packages/com.unity.modules.vehicles
-  name: com.unity.modules.vehicles
-  displayName: Vehicles
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Vehicles module implements vehicle physics simulation through
-    the WheelCollider component. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VehiclesModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.video@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.video
-  assetPath: Packages/com.unity.modules.video
-  name: com.unity.modules.video
-  displayName: Video
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Video module lets you play back video files in your content.
-    Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VideoModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.audio
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.audio
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.vr@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vr
-  assetPath: Packages/com.unity.modules.vr
-  name: com.unity.modules.vr
-  displayName: VR
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The VR module implements support for virtual reality devices in Unity.
-    Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.VRModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.wind@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.wind
-  assetPath: Packages/com.unity.modules.wind
-  name: com.unity.modules.wind
-  displayName: Wind
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Wind module implements the WindZone component which can affect
-    terrain rendering and particle simulations. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.WindModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.xr@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.xr
-  assetPath: Packages/com.unity.modules.xr
-  name: com.unity.modules.xr
-  displayName: XR
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The XR module contains the VR and AR related platform support functionality.
-    Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.XRModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.subsystems@1.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems
-  assetPath: Packages/com.unity.modules.subsystems
-  name: com.unity.modules.subsystems
-  displayName: Subsystems
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Subsystem module contains the definitions and runtime support
-    for general subsystems in Unity. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.SubsystemsModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -4501,7 +3891,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.0.61f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore
+  resolvedPath: /home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -4553,6 +3943,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 0
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -4654,6 +4045,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -4756,6 +4148,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -4835,6 +4228,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 0
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -4947,8 +4341,8 @@ m_ResolvedPackages:
     - 13.0.0
     - 13.0.1
     compatible:
-    - 9.1.1
-    recommended: 9.1.1
+    - 11.0.1
+    recommended: 11.0.1
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -4980,6 +4374,8 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.hierarchycore
     version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
   keywords:
   - 2d
   registry:
@@ -5006,11 +4402,12 @@ m_ResolvedPackages:
     revision: 98a4faf22484a3679f8d6a3b60b5d07f5e652cd7
     path: 
   unityLifecycle:
-    version: 9.1.1
+    version: 11.0.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 0
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5021,8 +4418,8 @@ m_ResolvedPackages:
     productId: 
   fingerprint: dd402daace1b7dbeb70cb9e7ae044cc4b10f989a
   editorCompatibility:
-    compatibilityLevel: 2
-    minimumPackageVersion: 9.1.1
+    compatibilityLevel: 0
+    minimumPackageVersion: 11.0.1
     minimumUnityVersion: 6000.2.0a9
   compliance:
     status: 0
@@ -5108,6 +4505,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5295,6 +4693,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5519,6 +4918,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5621,6 +5021,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 0
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5765,6 +5166,7 @@ m_ResolvedPackages:
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
+    isDiscoverable: 1
   isDeprecated: 0
   deprecationMessage: 
   git:
@@ -5784,4 +5186,4 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-m_BuiltInPackagesHash: 2f30df0187dff38d3a47aca0ba1e5db27c648d09
+m_BuiltInPackagesHash: 86c4287b32fe378f5483cf101fee69983a16a600

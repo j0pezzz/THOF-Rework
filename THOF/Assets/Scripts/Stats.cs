@@ -172,6 +172,12 @@ public class Stats : MonoBehaviour
         }
     }
 
+    //TODO: we need to save all stats and weapons.
+    public override string ToString()
+    {
+        return $"";
+    }
+
     private static Stats _instance;
     public static Stats Instance
     {

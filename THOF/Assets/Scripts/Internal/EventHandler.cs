@@ -16,6 +16,9 @@ namespace Internal
         {
             public static Action OnLevelUp;
             public static void DispatchLevelUp() => OnLevelUp?.Invoke();
+
+            public static Action OnPlayerDead;
+            public static void DispatchPlayerDead() => OnPlayerDead?.Invoke();
         }
     }
 }

@@ -12,7 +12,7 @@ public class ShopItem : ScriptableObject
     public bool isBought = false;
     public bool isEquip = false;
     public bool isInv = false;
-    public float speedIncrease;
-    public float strengthIncrease;
-    public float healthIncrease;
+    public int speedIncrease;
+    public int strengthIncrease;
+    public int healthIncrease;
 }

@@ -15,7 +15,11 @@ MonoBehaviour:
   itemName: Eagle Kick
   maxItems: 1
   image: {fileID: 3183226455223333533, guid: a508f95a1db3be1469cde282b9ef6c7b, type: 3}
+  howMuch: 100
+  shopType: 0
   isBought: 1
   isEquip: 1
   isInv: 0
-  btn: {fileID: 0}
+  speedIncrease: 7
+  strengthIncrease: 2
+  healthIncrease: 0

@@ -20,3 +20,6 @@ MonoBehaviour:
   isBought: 0
   isEquip: 0
   isInv: 0
+  speedIncrease: 8
+  strengthIncrease: 4
+  healthIncrease: 0

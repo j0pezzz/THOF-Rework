@@ -7552,7 +7552,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 553539263}
         m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
-        m_MethodName: Strenght
+        m_MethodName: Strength
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14015,7 +14015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.1651, y: -10.5122}
+  m_AnchoredPosition: {x: -46.16504, y: -10.512207}
   m_SizeDelta: {x: 192.3004, y: 135.5803}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1975128379

@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
-    PlayerController Mo;
-    Stats St;
-
     public Text skillpoints;
     public Text xp;
     public Text healthSp;
@@ -15,63 +10,44 @@ public class Upgrade : MonoBehaviour
     public Text strenghtSp;
     public Text healingSp;
 
-    // Start is called before the first frame update
-    void Start()
+    void UpdateUpgrades()
     {
-        Mo = GameObject.Find("Player").GetComponent<PlayerController>();
-        St = GameObject.Find("Player").GetComponent<Stats>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        TextThingie();
-    }
-
-    void TextThingie()
-    {
-        skillpoints.text = "Skillpoints: " + St.skillPoints.ToString();
-        xp.text = St.xp + "/" + St.ofWhatXp + " XP";
-        healthSp.text = St.bonusHealth + "/20 " + "Health (" + St.healthSPN.ToString() + ")";
-        speedSp.text = St.speed + "/20 " + "Speed (" + St.speedSPN.ToString() + ")";
-        strenghtSp.text = St.strenght + "/20 " + "Strenght (" + St.strenghtSPN.ToString() + ")";
-        healingSp.text = St.healing + "/20 " + "Healing (" + St.healingSPN.ToString() + ")";
+        skillpoints.text = $"Skillpoints: {Stats.Instance.GetSkillPoints()}";
+        xp.text = $"{Stats.Instance.xp}/{Stats.Instance.ofWhatXp} XP";
+        healthSp.text = $"{Stats.Instance.bonusHealth}/20 Health ({Stats.Instance.GetHealthSkillPointsNeeded()})";
+        speedSp.text = $"{Stats.Instance.speed}/20 Speed ({Stats.Instance.GetSpeedSkillPointsNeeded()}";
+        strenghtSp.text = $"{Stats.Instance.strenght}/20 Strength ({Stats.Instance.GetStrengthSkillPointsNeeded()})";
+        healingSp.text = $"{Stats.Instance.healing}/20 Healing ({Stats.Instance.GetHealingSkillPointsNeeded()})";
     }
 
     public void Health()
     {
-        if (St.skillPoints >= St.healthSPN)
-        {
-            St.skillPoints -= St.healthSPN;
-            St.bonusHealth++;
-            St.fullHealth++;
-        }
+        if (Stats.Instance.GetSkillPoints() < Stats.Instance.GetHealthSkillPointsNeeded()) return;
+        
+        Stats.Instance.UpgradeHealth();
+        UpdateUpgrades();
     }
 
     public void Speed()
     {
-        if (St.skillPoints >= St.speedSPN)
-        {
-            St.skillPoints -= St.speedSPN;
-            St.speed++;
-        }
+        if (Stats.Instance.GetSkillPoints() < Stats.Instance.GetSpeedSkillPointsNeeded()) return;
+        
+        Stats.Instance.UpgradeSpeed();
+        UpdateUpgrades();
     }
 
-    public void Strenght()
+    public void Strength()
     {
-        if (St.skillPoints >= St.strenghtSPN)
-        {
-            St.skillPoints -= St.strenghtSPN;
-            St.strenght++;
-        }
+        if (Stats.Instance.GetSkillPoints() < Stats.Instance.GetStrengthSkillPointsNeeded()) return;
+        
+        Stats.Instance.UpgradeStrength();
     }
 
     public void Healing()
     {
-        if (St.skillPoints >= St.healingSPN)
-        {
-            St.skillPoints -= St.healingSPN;
-            St.healing++;
-        }
+        if (Stats.Instance.GetSkillPoints() < Stats.Instance.GetHealingSkillPointsNeeded()) return;
+        
+        Stats.Instance.UpgradeHealing();
+        UpdateUpgrades();
     }
 }

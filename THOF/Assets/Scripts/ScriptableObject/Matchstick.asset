@@ -16,6 +16,10 @@ MonoBehaviour:
   maxItems: 1
   image: {fileID: 21300000, guid: 70b628ccaea21c645904c1ee992255d7, type: 3}
   howMuch: 0
+  shopType: 0
   isBought: 1
   isEquip: 1
   isInv: 1
+  speedIncrease: 6
+  strengthIncrease: 2
+  healthIncrease: 0

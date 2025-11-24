@@ -16,10 +16,10 @@ public class Stats : MonoBehaviour
     public int skillPoints = 0;
     public int coins = 0;
     public int coinsAfter = 50;
-    public int healthSPN;
-    public int speedSPN;
-    public int strenghtSPN;
-    public int healingSPN;
+    public int healthSkillPointsNeeded = 1;
+    public int speedSkillPointsNeeded = 1;
+    public int strenghtSkillPointsNeeded = 1;
+    public int healingSkillPointsNeeded = 1;
 
     public Text hp;
     public Text coinAmount;
@@ -38,8 +38,6 @@ public class Stats : MonoBehaviour
     void Update()
     {
         LevelUp();
-        Skillpointsneeded();
-        NegativeHealth();
         hp.text = health.ToString();
         coinAmount.text = coins.ToString();
     }
@@ -61,115 +59,151 @@ public class Stats : MonoBehaviour
         }
     }
 
-    public void Skillpointsneeded()
+    public void UpgradeHealth()
     {
-        if (healing < 2)
-        {
-            healingSPN = 1;
-        }
+        skillPoints -= healthSkillPointsNeeded;
 
-        if (healing > 2 && healing <= 3)
-        {
-            healingSPN = 2;
-        }
+        bonusHealth++;
+        fullHealth++;
 
-        if (healing > 3 && healing <= 5)
-        {
-            healingSPN = 3;
-        }
+        CalculateHealthSkillPointRequirement();
+    }
 
-        if (healing > 5 && healing <= 8)
-        {
-            healingSPN = 4;
-        }
-
-        if (healing > 8)
-        {
-            healingSPN = 50;
-        }
-
-        if (speed < 2.5f)
-        {
-            speedSPN = 1;
-        }
-
-        if (speed > 2.5f && speed < 5)
-        {
-            speedSPN = 2;
-        }
-
-        if (speed > 5 && speed < 7.5f)
-        {
-            speedSPN = 3;
-        }
-
-        if (speed > 7.5f && speed < 10)
-        {
-            speedSPN = 4;
-        }
-
-        if (speed > 10)
-        {
-            speedSPN = 50;
-        }
-
-        if (strenght < 2.5f)
-        {
-            strenghtSPN = 1;
-        }
-
-        if (strenght > 2.5f && strenght < 5)
-        {
-            strenghtSPN = 2;
-        }
-
-        if (strenght > 5 && strenght < 7.5f)
-        {
-            strenghtSPN = 3;
-        }
-
-        if (strenght > 7.5f && strenght < 10)
-        {
-            strenghtSPN = 4;
-        }
-
-        if (strenght > 10)
-        {
-            strenghtSPN = 50;
-        }
-
+    void CalculateHealthSkillPointRequirement()
+    {
         if (bonusHealth < 2.5f)
         {
-            healthSPN = 1;
+            healthSkillPointsNeeded = 1;
         }
-
-        if (bonusHealth > 2.5f && bonusHealth < 5)
+        else if (bonusHealth < 5f)
         {
-            healthSPN = 2;
+            healthSkillPointsNeeded = 2;
         }
-
-        if (bonusHealth > 5 && bonusHealth < 7.5f)
+        else if (bonusHealth < 7.5f)
         {
-            healthSPN = 3;
+            healthSkillPointsNeeded = 3;
         }
-
-        if (bonusHealth > 7.5f && bonusHealth < 10)
+        else if (bonusHealth < 10f)
         {
-            healthSPN = 4;
+            healthSkillPointsNeeded = 4;
         }
-
-        if (bonusHealth > 10)
+        else
         {
-            healthSPN = 50;
+            healthSkillPointsNeeded = 50;
         }
     }
 
-    void NegativeHealth()
+    public void UpgradeSpeed()
     {
-        if (health < 0)
+        skillPoints -= speedSkillPointsNeeded;
+        speed++;
+
+        CalculateSpeedSkillPointRequirement();
+    }
+
+    void CalculateSpeedSkillPointRequirement()
+    {
+        if (speed < 2.5f)
         {
-            health = 0;
+            speedSkillPointsNeeded = 1;
         }
+        else if (speed < 5)
+        {
+            speedSkillPointsNeeded = 2;
+        }
+        else if (speed < 7.5f)
+        {
+            speedSkillPointsNeeded = 3;
+        }
+        else if (speed < 10)
+        {
+            speedSkillPointsNeeded = 4;
+        }
+        else
+        {
+            speedSkillPointsNeeded = 50;
+        }
+    }
+
+    public void UpgradeStrength()
+    {
+        skillPoints -= strenghtSkillPointsNeeded;
+        strenght++;
+
+        CalculateStrengthSkillPointRequirement();
+    }
+
+    void CalculateStrengthSkillPointRequirement()
+    {
+        if (strenght < 2.5f)
+        {
+            strenghtSkillPointsNeeded = 1;
+        }
+        else if (strenght < 5)
+        {
+            strenghtSkillPointsNeeded = 2;
+        }
+        else if (strenght < 7.5f)
+        {
+            strenghtSkillPointsNeeded = 3;
+        }
+        else if (strenght < 10)
+        {
+            strenghtSkillPointsNeeded = 4;
+        }
+        else
+        {
+            strenghtSkillPointsNeeded = 50;
+        }
+    }
+
+    public void UpgradeHealing()
+    {
+        skillPoints -= healingSkillPointsNeeded;
+        healing++;
+        
+        CalculateHealingSkillPointRequirement();
+    }
+
+    void CalculateHealingSkillPointRequirement()
+    {
+        if (healing < 2)
+        {
+            healingSkillPointsNeeded = 1;
+        }
+        else if (healing < 3)
+        {
+            healingSkillPointsNeeded = 2;
+        }
+        else if (healing < 5)
+        {
+            healingSkillPointsNeeded = 3;
+        }
+        else if (healing <= 8)
+        {
+            healingSkillPointsNeeded = 4;
+        }
+        else
+        {
+            healingSkillPointsNeeded = 50;
+        }
+    }
+
+    public int GetSkillPoints() => skillPoints;
+
+    public int GetHealthSkillPointsNeeded() => healthSkillPointsNeeded;
+    public int GetSpeedSkillPointsNeeded() => speedSkillPointsNeeded;
+    public int GetStrengthSkillPointsNeeded() => strenghtSkillPointsNeeded;
+    public int GetHealingSkillPointsNeeded() => healingSkillPointsNeeded;
+
+    public void AddHealth(int addHealth)
+    {
+        health = Mathf.Clamp(health + addHealth, 0, fullHealth);
+    }
+
+    public void ReduceHealth(int minusHealth)
+    {
+        health = Mathf.Clamp(health - minusHealth, 0, fullHealth);
     }
 
     //TODO: we need to save all stats and weapons.

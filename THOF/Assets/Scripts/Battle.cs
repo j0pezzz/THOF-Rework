@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using Internal;
 using Internal.Structures;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,76 +21,19 @@ public class Battle : MonoBehaviour
 
     public bool isAttacking;
 
-    //int ogPH;
     public int ogEH;
     int enemyHP = 5;
     int enemyAD;
     int enemyAS;
-
-    PlayerController Mo;
-    Stats St;
-    Enemy Gr;
-    GrassEnemy2 Gr2;
-    GrassEnemy3 Gr3;
-    GrassEnemy4 Gr4;
-    SIH1 S1;
-    IceEnemy Ic;
-    IceEnemy2 Ic2;
-    IceEnemy3 Ic3;
-    IceEnemy4 Ic4;
-    SIH2 S2;
-    DesertEnemy De;
-    DesertEnemy2 De2;
-    DesertEnemy3 De3;
-    DesertEnemy4 De4;
-    SIH3 S3;
-    MountainEnemy Mo1;
-    MountainEnemy2 Mo2;
-    MountainEnemy3 Mo3;
-    MountainEnemy4 Mo4;
-    SIH4 S4;
+    private EnemyBase _currentEnemy;
 
 
     void Start()
     {
-        Mo = GameObject.Find("Player").GetComponent<PlayerController>();
-        St = GameObject.Find("Player").GetComponent<Stats>();
-        Gr = GameObject.Find("enemy").GetComponent<Enemy>();
-        Gr2 = GameObject.Find("enemy2").GetComponent<GrassEnemy2>();
-        Gr3 = GameObject.Find("enemy3").GetComponent<GrassEnemy3>();
-        Gr4 = GameObject.Find("enemy4").GetComponent<GrassEnemy4>();
-        S1 = GameObject.Find("Semi Iso Herra1").GetComponent<SIH1>();
-        Ic = GameObject.Find("enemy5").GetComponent<IceEnemy>();
-        Ic2 = GameObject.Find("enemy6").GetComponent<IceEnemy2>();
-        Ic3 = GameObject.Find("enemy7").GetComponent<IceEnemy3>();
-        Ic4 = GameObject.Find("enemy8").GetComponent<IceEnemy4>();
-        S2 = GameObject.Find("Semi Iso Herra2").GetComponent<SIH2>();
-        De = GameObject.Find("enemy9").GetComponent<DesertEnemy>();
-        De2 = GameObject.Find("enemy10").GetComponent<DesertEnemy2>();
-        De3 = GameObject.Find("enemy11").GetComponent<DesertEnemy3>();
-        De4 = GameObject.Find("enemy12").GetComponent<DesertEnemy4>();
-        S3 = GameObject.Find("Semi Iso Herra3").GetComponent<SIH3>();
-        Mo1 = GameObject.Find("enemy13").GetComponent<MountainEnemy>();
-        Mo2 = GameObject.Find("enemy14").GetComponent<MountainEnemy2>();
-        Mo3 = GameObject.Find("enemy15").GetComponent<MountainEnemy3>();
-        Mo4 = GameObject.Find("enemy16").GetComponent<MountainEnemy4>();
-        S4 = GameObject.Find("Semi Iso Herra4").GetComponent<SIH4>();
-
-        //attack1.text = St.weaponName1;
-        //attack2.text = St.weaponName2;
-        //attackE.text = St.weaponNameE;
+        attack1.text = Stats.Instance.equippedItems[0].itemName;
+        attack2.text = Stats.Instance.equippedItems[1].itemName;
+        attackE.text = Stats.Instance.equippedItems[2].itemName;
     }
-
-    void Update()
-    {
-        //attack1.text = St.weaponName1;
-        //attack2.text = St.weaponName2;
-        //attackE.text = St.weaponNameE;
-
-        CheckHealth();
-    }
-
-    private EnemyBase _currentEnemy;
 
     public void SetEnemy(EnemyBase enemy)
     {
@@ -100,28 +43,32 @@ public class Battle : MonoBehaviour
 
     public void Begin()
     {
-        battlePanel.SetActive(true);
-        xpGivenText.SetActive(false);
-
-
         if (_currentEnemy == null)
         {
             Debug.LogError("No enemy!");
             return;
         }
+        
+        EventHandler.Player.OnPlayerDead += OnPlayerDead;
+        battlePanel.SetActive(true);
+        xpGivenText.SetActive(false);
 
         enemyHP = _currentEnemy.Health;
         enemyAS = _currentEnemy.Speed;
         enemyAD = _currentEnemy.Strength;
         ogEH = _currentEnemy.Health;
+        enemyHPText.text = enemyHP.ToString();
     }
+
+    void OnPlayerDead() => StartCoroutine(PlayerDead());
 
     public void Stop()
     {
+        EventHandler.Player.OnPlayerDead -= OnPlayerDead;
         battlePanel.SetActive(false);
-        Mo.inAction = false;
+        PlayerController.Instance.inAction = false;
         isAttacking = false;
-        St.health = St.fullHealth;
+        Stats.Instance.health = Stats.Instance.fullHealth;
     }
 
     IEnumerator BattleOver()
@@ -130,8 +77,8 @@ public class Battle : MonoBehaviour
         losePanel.SetActive(false);
         battlePanel.SetActive(false);
         isAttacking = false;
-        Mo.inAction = false;
-        St.health = St.fullHealth;
+        PlayerController.Instance.inAction = false;
+        Stats.Instance.health = Stats.Instance.fullHealth;
         xpGivenText.SetActive(false);
     }
 
@@ -149,8 +96,8 @@ public class Battle : MonoBehaviour
         
         xpGivenText.SetActive(true);
         coinsGiven.enabled = true;
-        coinsGiven.text = St.coinsAfter.ToString() + " coins";
-        St.coins += St.coinsAfter;
+        coinsGiven.text = $"{Stats.Instance.coinsAfter} coins";
+        Stats.Instance.coins += Stats.Instance.coinsAfter;
         yield return new WaitForSeconds(1);
         xpGivenText.SetActive(false);
         coinsGiven.enabled = false;
@@ -160,22 +107,14 @@ public class Battle : MonoBehaviour
 
     void GiveXp()
     {
-        St.xp += ogEH;
+        Stats.Instance.xp += ogEH;
     }
 
-    void CheckHealth()
+    void ReduceEnemyHealth(int minusHealth)
     {
-        if (enemyHP < 0)
-        {
-            enemyHP = 0;
-        }
+        enemyHP = Mathf.Clamp(enemyHP - minusHealth, 0, _currentEnemy.Health);
         
         enemyHPText.text = enemyHP.ToString();
-
-        if (St.health <= 0)
-        {
-            StartCoroutine(PlayerDead());
-        }
 
         if (enemyHP <= 0)
         {
@@ -185,148 +124,139 @@ public class Battle : MonoBehaviour
 
     public void Attack()
     {
-        if (isAttacking == false)
-        {
-            isAttacking = true;
-            StartCoroutine(Attack1());
-        }
+        if (isAttacking) return;
+        
+        isAttacking = true;
+        StartCoroutine(Attack1());
     }
 
     public void SecondAttack()
     {
-        if (isAttacking == false)
-        {
-            isAttacking = true;
-            StartCoroutine(Attack2());
-        }
+        if (isAttacking) return;
+        
+        isAttacking = true;
+        StartCoroutine(Attack2());
     }
 
     public void Attack3()
     {
-        if (isAttacking == false)
-        {
-            isAttacking = true;
-            StartCoroutine(AttackE());
-        }
+        if (isAttacking) return;
+        
+        isAttacking = true;
+        StartCoroutine(AttackE());
     }
 
     IEnumerator Attack1()
     {
-        yield return null;
-        /*if (St.realSpeed >= enemyAS)
+        int speed = Stats.Instance.speed + Stats.Instance.equippedItems[0].speedIncrease;
+        int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[0].strengthIncrease;
+        
+        if (speed >= enemyAS)
         {
-            enemyHP -= St.realStrenght;
+            ReduceEnemyHealth(strength);
             yield return new WaitForSeconds(1);
 
             if (enemyHP > 0)
             {
-                St.health -= enemyAD;
+                Stats.Instance.ReduceHealth(enemyAD);
             }
 
             isAttacking = false;
         }
 
-        else if (St.realSpeed < enemyAS)
+        else if (speed< enemyAS)
         {
-            St.health -= enemyAD;
+            Stats.Instance.ReduceHealth(enemyAD);
             yield return new WaitForSeconds(1);
 
-            if (St.health > 0)
+            if (Stats.Instance.health > 0)
             {
-                enemyHP -= St.realStrenght;
+                ReduceEnemyHealth(strength);
             }
 
             isAttacking = false;
-        }*/
+        }
     }
 
     IEnumerator Attack2()
     {
-        yield return null;
-        /*if (St.realSpeed2 >= enemyAS)
+        int speed = Stats.Instance.speed + Stats.Instance.equippedItems[1].speedIncrease;
+        int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[1].strengthIncrease;
+        
+        if (speed >= enemyAS)
         {
-            enemyHP -= St.realStrenght2;
+            ReduceEnemyHealth(strength);
             yield return new WaitForSeconds(1);
 
             if (enemyHP > 0)
             {
-                St.health -= enemyAD;
+                Stats.Instance.ReduceHealth(enemyAD);
             }
 
             isAttacking = false;
         }
-
-        else if (St.realSpeed2 < enemyAS)
+        else if (speed < enemyAS)
         {
-            St.health -= enemyAD;
+            Stats.Instance.ReduceHealth(enemyAD);
             yield return new WaitForSeconds(1);
 
-            if (St.health > 0)
+            if (Stats.Instance.health > 0)
             {
-                enemyHP -= St.realStrenght2;
+                ReduceEnemyHealth(strength);
             }
 
             isAttacking = false;
-        }*/
+        }
     }
 
     IEnumerator AttackE()
     {
-        yield return null;
-        /*if (St.realSpeedE >= enemyAS)
+        int speed = Stats.Instance.speed + Stats.Instance.equippedItems[2].speedIncrease;
+        int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[2].strengthIncrease;
+        int healing = Stats.Instance.healing + Stats.Instance.equippedItems[2].healthIncrease;
+        
+        if (speed >= enemyAS)
         {
-            enemyHP -= St.realStrenghtE;
+            ReduceEnemyHealth(strength);
 
-            if (St.realHealingE > 0)
+            if (healing > 0)
             {
-                St.health += St.realHealingE;
-                
-                if (St.health > St.fullHealth)
-                {
-                    St.health = St.fullHealth;
-                }
+                Stats.Instance.AddHealth(healing);
             }
             
             yield return new WaitForSeconds(1);
 
             if (enemyHP > 0)
             {
-                St.health -= enemyAD;
+                Stats.Instance.ReduceHealth(enemyAD);
             }
 
             isAttacking = false;
         }
-
-        else if (St.realSpeedE < enemyAS)
+        else if (speed < enemyAS)
         {
-            St.health -= enemyAD;
+            Stats.Instance.ReduceHealth(enemyAD);
             yield return new WaitForSeconds(1);
 
-            if (St.health > 0)
+            if (Stats.Instance.health > 0)
             {
-                enemyHP -= St.realStrenghtE;
-                if (St.realHealingE > 0)
+                ReduceEnemyHealth(strength);
+                if (healing > 0)
                 {
-                    St.health += St.realHealingE;
-
-                    if (St.health > St.fullHealth)
-                    {
-                        St.health = St.fullHealth;
-                    }
+                    Stats.Instance.AddHealth(healing);
                 }
             }
 
             isAttacking = false;
-        }*/
+        }
     }
 
     private static Battle _instance;
-
     public static Battle Instance
     {
         get
         {
-            if  (_instance == null) _instance = FindAnyObjectByType<Battle>();
+            if  (!_instance) _instance = FindAnyObjectByType<Battle>();
             return _instance;
         }
     }

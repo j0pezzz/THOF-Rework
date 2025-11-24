@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.TryGetComponent(out EnemyBase enemyBase))
         {
             nearEnemy = true;
-            Debug.Log("Enemy found");
+            //Debug.Log("Enemy found");
             enemyBase.CheckEnemyFightStatus();
             Dialog.Instance.SetEnemyIcon(enemyBase.EnemySprite);
             Battle.Instance.SetEnemy(enemyBase);

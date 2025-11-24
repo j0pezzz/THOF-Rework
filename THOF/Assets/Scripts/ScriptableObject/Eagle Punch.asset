@@ -15,7 +15,11 @@ MonoBehaviour:
   itemName: Eagle Punch
   maxItems: 1
   image: {fileID: 21300000, guid: eaa3ccaeebe190d48a18a54a8d5b9a41, type: 3}
+  howMuch: 100
+  shopType: 0
   isBought: 1
   isEquip: 1
   isInv: 0
-  btn: {fileID: 0}
+  speedIncrease: 3
+  strengthIncrease: 3
+  healthIncrease: 0

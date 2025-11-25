@@ -7,7 +7,7 @@ namespace Runtime
 {
     public class Chest : MonoBehaviour
     {
-        public List<ShopItem> chestItems;
+        public List<ChestItem> chestItems;
         
         void OnTriggerEnter2D(Collider2D other)
         {

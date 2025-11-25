@@ -1,31 +1,21 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Runtime.UI.Chest;
 using UnityEngine;
-using UnityEngine.UI;
 using EventHandler = Internal.EventHandler;
 
 public class ChestUI : MonoBehaviour
 {
     [SerializeField] private GameObject contentRoot;
-
-    public ChestItems coins;
-
-    public Image item1;
-    public Text item1_text;
-
-    public Button btn_1;
-
-    public Text takeText;
+    [SerializeField] private RectTransform itemTransform;
+    [SerializeField] private GameObject chestItemTemplate;
     
     bool _isOpen;
     private bool _canOpen;
+    private readonly Dictionary<string, GameObject> _cacheUI = new();
 
     void Start()
     {
         EventHandler.Player.OnPlayerEnterChest += OnPlayerEnterChest;
-        takeText.text = "";
-        item1_text.text = "";
     }
 
     void OnDisable()
@@ -33,9 +23,33 @@ public class ChestUI : MonoBehaviour
         EventHandler.Player.OnPlayerEnterChest -= OnPlayerEnterChest;
     }
 
-    public void InitializeChestItems(List<ShopItem> chestItems)
+    public void InitializeChestItems(List<ChestItem> chestItems)
     {
-        //TODO: we need to instantiate all items which are in the chest we are about to open.
+        CleanUI();
+        foreach (ChestItem chestItem in chestItems)
+        {
+            GameObject chestItemObj = Instantiate(chestItemTemplate, itemTransform);
+
+            if (!chestItemObj.TryGetComponent(out ChestItemUI itemUI))
+            {
+                Debug.LogError("chestItemTemplate does not have <b>ChestItemUI<b> attached!");
+                Destroy(chestItemObj);
+                continue;
+            }
+            
+            itemUI.InitializeItem(chestItem);
+            _cacheUI.Add(chestItem.identifier, chestItemObj);
+        }
+    }
+
+    void CleanUI()
+    {
+        foreach (var item in _cacheUI)
+        {
+            Destroy(item.Value);
+        }
+        
+        _cacheUI.Clear();
     }
 
     void OnPlayerEnterChest(bool enter)
@@ -65,7 +79,6 @@ public class ChestUI : MonoBehaviour
             }
             
             contentRoot.gameObject.SetActive(true);
-            CheckItems();
         }
 
         if (_isOpen) return;
@@ -77,30 +90,6 @@ public class ChestUI : MonoBehaviour
     {
         contentRoot.SetActive(false);
         _isOpen = false;
-    }
-
-    void CheckItems()
-    {
-        if (!coins.inChest) return;
-        
-        item1.sprite = coins.image;
-        item1_text.text = $"{coins.amount} {coins.type}";
-    }
-
-    public void TakeStuff(Button btn)
-    {
-        if (!btn.tag.Equals("Coins")) return;
-        
-        item1.enabled = false;
-        Stats.Instance.AddCoins(coins.amount);
-        takeText.text = $"You got {coins.amount} {coins.type}";
-        StartCoroutine(TakeWait());
-    }
-
-    IEnumerator TakeWait()
-    {
-        yield return new WaitForSeconds(2);
-        takeText.text = "";
     }
 
     public bool IsOpen() => _isOpen;

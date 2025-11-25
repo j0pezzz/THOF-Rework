@@ -97,7 +97,7 @@ public class Battle : MonoBehaviour
         xpGivenText.SetActive(true);
         coinsGiven.enabled = true;
         coinsGiven.text = $"{Stats.Instance.coinsAfter} coins";
-        Stats.Instance.coins += Stats.Instance.coinsAfter;
+        Stats.Instance.AddCoins();
         yield return new WaitForSeconds(1);
         xpGivenText.SetActive(false);
         coinsGiven.enabled = false;

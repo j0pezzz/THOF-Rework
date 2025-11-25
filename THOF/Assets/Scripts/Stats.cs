@@ -21,25 +21,38 @@ public class Stats : MonoBehaviour
     public int strenghtSkillPointsNeeded = 1;
     public int healingSkillPointsNeeded = 1;
 
-    public Text hp;
-    public Text coinAmount;
-
     public List<ShopItem> items = new();
     public List<ShopItem> equippedItems = new();
 
     void Start()
     {
         equippedItems = new List<ShopItem>(GameData.Instance.startingItems);
-
+        
         health = fullHealth;
-        hp.text = health.ToString();
+        UIReferences.Instance.UpdateHealth(fullHealth);
+    }
+
+    public void AddCoins()
+    {
+        coins += coinsAfter;
+        UIReferences.Instance.UpdateCoins(coins);
+    }
+
+    public void SetCoins(int amount)
+    {
+        coins = amount;
+        UIReferences.Instance.UpdateCoins(coins);
+    }
+
+    public void SetHealth(int savedHealth)
+    {
+        health = savedHealth;
+        UIReferences.Instance.UpdateHealth(health);
     }
 
     void Update()
     {
         LevelUp();
-        hp.text = health.ToString();
-        coinAmount.text = coins.ToString();
     }
 
     public void SetData()
@@ -199,11 +212,13 @@ public class Stats : MonoBehaviour
     public void AddHealth(int addHealth)
     {
         health = Mathf.Clamp(health + addHealth, 0, fullHealth);
+        UIReferences.Instance.UpdateHealth(health);
     }
 
     public void ReduceHealth(int minusHealth)
     {
         health = Mathf.Clamp(health - minusHealth, 0, fullHealth);
+        UIReferences.Instance.UpdateHealth(health);
     }
 
     //TODO: we need to save all stats and weapons.

@@ -10,6 +10,8 @@ public class UIReferences : MonoBehaviour
     [SerializeField] private TextMeshProUGUI shopText;
     [SerializeField] private TextMeshProUGUI equipText;
     [SerializeField] private TextMeshProUGUI interactText;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI coinsText;
 
     public void OpenWindow(string windowName, string text = "", float closeTime = 0)
     {
@@ -28,6 +30,16 @@ public class UIReferences : MonoBehaviour
         
         window.WindowRoot.SetActive(true);
         StartCoroutine(WaitClose(window.WindowRoot, closeTime));
+    }
+
+    public void UpdateHealth(int amount)
+    {
+        healthText.SetText(amount.ToString());
+    }
+
+    public void UpdateCoins(int amount)
+    {
+        
     }
 
     public void ActivateOpenShop()

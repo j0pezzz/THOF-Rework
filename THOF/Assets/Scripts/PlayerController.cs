@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         
         inAction = true;
         UIReferences.Instance.ShowInteract(false);
-        Dialog.Instance.BoxOn();
+        Dialog.Instance.StartDialog();
     }
     
     void Person()
@@ -91,24 +91,16 @@ public class PlayerController : MonoBehaviour
         
         SaveData saveData = SaveSystem.SaveData;
         Stats.Instance.level = saveData.Level;
-        Stats.Instance.coins = saveData.Coins;
-        Stats.Instance.health = saveData.Health;
+        Stats.Instance.SetCoins(saveData.Coins);
+        Stats.Instance.SetHealth(saveData.Health);
         player.transform.position = saveData.Position;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         _rb.MovePosition(_rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
 
-        if (!inAction)
-        {
-            moveSpeed = 2.5f;
-        }
-
-        if (inAction)
-        {
-            moveSpeed = 0f;
-        }
+        moveSpeed = !inAction ? 2.5f : 0;
     }
 
     void Door()

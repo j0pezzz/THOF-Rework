@@ -1,4 +1,3 @@
-using Internal.Enums;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,12 +5,12 @@ public class Dialog : MonoBehaviour
 {
     [SerializeField] private Image enemyIcon;
 
-    string talking;
+    string _talking;
 
     public GameObject logPanel;
     public Text speech;
 
-    public void BoxOn()
+    public void StartDialog()
     {
         logPanel.SetActive(true);
     }
@@ -31,7 +30,7 @@ public class Dialog : MonoBehaviour
 
     public void TalkShit()
     {
-        speech.text = talking;
+        speech.text = _talking;
     }
 
     private static Dialog _instance;

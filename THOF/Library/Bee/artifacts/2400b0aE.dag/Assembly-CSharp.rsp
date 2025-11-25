@@ -454,7 +454,7 @@
 "Assets/Scripts/Shop.cs"
 "Assets/Scripts/ShopItem.cs"
 "Assets/Scripts/Stats.cs"
-"Assets/Scripts/Upgrade.cs"
+"Assets/Scripts/UpgradeUI.cs"
 -langversion:9.0
 /deterministic
 /optimize+

@@ -1,12 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EventHandler = Internal.EventHandler;
 
 public class ChestUI : MonoBehaviour
 {
     [SerializeField] private GameObject contentRoot;
-    public bool isOpen;
 
     public ChestItems coins;
 
@@ -16,16 +17,35 @@ public class ChestUI : MonoBehaviour
     public Button btn_1;
 
     public Text takeText;
+    
+    bool _isOpen;
+    private bool _canOpen;
 
     void Start()
     {
+        EventHandler.Player.OnPlayerEnterChest += OnPlayerEnterChest;
         takeText.text = "";
         item1_text.text = "";
     }
 
+    void OnDisable()
+    {
+        EventHandler.Player.OnPlayerEnterChest -= OnPlayerEnterChest;
+    }
+
+    public void InitializeChestItems(List<ShopItem> chestItems)
+    {
+        //TODO: we need to instantiate all items which are in the chest we are about to open.
+    }
+
+    void OnPlayerEnterChest(bool enter)
+    {
+        _canOpen = enter;
+    }
+
     void Update()
     {
-        if (!PlayerController.Instance.inChest) return;
+        if (!_canOpen) return;
         
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -35,30 +55,28 @@ public class ChestUI : MonoBehaviour
 
     public void ToggleUI()
     {
-        isOpen = !isOpen;
+        _isOpen = !_isOpen;
 
-        if (isOpen)
+        if (_isOpen)
         {
             if (InventoryUI.Instance.isOpen)
             {
                 InventoryUI.Instance.ToggleUI();
             }
             
-            transform.GetChild(0).gameObject.SetActive(true);
-            PlayerController.Instance.chestText.text = "Press E To Close Chest";
+            contentRoot.gameObject.SetActive(true);
             CheckItems();
         }
 
-        if (isOpen) return;
+        if (_isOpen) return;
         
-        transform.GetChild(0).gameObject.SetActive(false);
-        PlayerController.Instance.chestText.text = "Press E To Open Chest";
+        contentRoot.gameObject.SetActive(false);
     }
 
     public void CloseChestUI()
     {
         contentRoot.SetActive(false);
-        isOpen = false;
+        _isOpen = false;
     }
 
     void CheckItems()
@@ -74,7 +92,7 @@ public class ChestUI : MonoBehaviour
         if (!btn.tag.Equals("Coins")) return;
         
         item1.enabled = false;
-        Stats.Instance.coins += coins.amount;
+        Stats.Instance.AddCoins(coins.amount);
         takeText.text = $"You got {coins.amount} {coins.type}";
         StartCoroutine(TakeWait());
     }
@@ -84,6 +102,8 @@ public class ChestUI : MonoBehaviour
         yield return new WaitForSeconds(2);
         takeText.text = "";
     }
+
+    public bool IsOpen() => _isOpen;
 
     private static ChestUI _instance;
     public static ChestUI Instance

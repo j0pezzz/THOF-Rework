@@ -1,12 +1,13 @@
 ﻿using System;
+using Internal.Enums;
 
 namespace Internal
 {
     public static class EventHandler
     {
-        public static Action OnEnterShop;
+        public static Action<ShopType> OnEnterShop;
 
-        public static void DispatchEnterShop() => OnEnterShop?.Invoke();
+        public static void DispatchEnterShop(ShopType shopType) => OnEnterShop?.Invoke(shopType);
         
         public static Action OnExitShop;
 
@@ -19,6 +20,9 @@ namespace Internal
 
             public static Action OnPlayerDead;
             public static void DispatchPlayerDead() => OnPlayerDead?.Invoke();
+
+            public static Action<bool> OnPlayerEnterChest;
+            public static void DispatchPlayerEnterChest(bool enter) => OnPlayerEnterChest?.Invoke(enter);
         }
     }
 }

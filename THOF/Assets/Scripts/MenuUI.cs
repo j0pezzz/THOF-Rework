@@ -17,7 +17,7 @@ public class MenuUI : MonoBehaviour
     {
         Application.targetFrameRate = 60; // Set the FPS to 60 to avoid using too much resources.
         OpenWindow(FirstWindow);
-        continueBtn.interactable = SaveSystem.LoadPlayer();
+        continueBtn.interactable = SaveSystem.LoadSaveGame();
     }
 
     public void ProceedToGame() => SceneManager.LoadScene(1);

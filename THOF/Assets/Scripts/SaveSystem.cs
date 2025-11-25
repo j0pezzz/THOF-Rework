@@ -1,13 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.IO;
 using Internal.Structures.Save_System;
 using System.Text;
 
-public static class SaveSystem
+public class SaveSystem : MonoBehaviour
 {
     public static SaveData SaveData;
-    
-    public static void SavePlayer(Stats stats)
+
+    void Start()
+    {
+        DontDestroyOnLoad(this);
+        LoadSaveGame();
+    }
+
+    public static void SaveGame(Stats stats)
     {
         SaveData saveData = new()
         {
@@ -33,9 +40,8 @@ public static class SaveSystem
         
         Debug.Log($"Saved save file to: {dataPath}");
     }
-
-
-    public static bool LoadPlayer()
+    
+    public static bool LoadSaveGame()
     {
         string dataPath = Path.Combine(Application.persistentDataPath, "GameData.dat");
 

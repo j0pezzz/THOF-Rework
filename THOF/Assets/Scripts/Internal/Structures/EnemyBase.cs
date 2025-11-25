@@ -14,6 +14,9 @@ namespace Internal.Structures
         public int EnemyIndex;
         public Sprite EnemySprite;
 
-        public abstract void CheckEnemyFightStatus();
+        protected void CheckEnemyFightStatus()
+        {
+            Collider.enabled = IsFightable;
+        }
     }
 }

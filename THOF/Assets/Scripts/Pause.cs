@@ -33,5 +33,13 @@ public class Pause : MonoBehaviour
         Time.timeScale = _isPaused ? 0 : 1;
     }
 
-    public void GoToMainMenu() => SceneManager.LoadScene(0);
+    public void GoToMainMenu()
+    {
+        if (Stats.Instance != null)
+        {
+            SaveSystem.SaveGame(Stats.Instance);
+        }
+        
+        SceneManager.LoadScene(0);
+    }
 }

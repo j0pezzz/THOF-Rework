@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Internal.Structures.Save_System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
@@ -30,6 +32,10 @@ public class Stats : MonoBehaviour
         
         health = fullHealth;
         UIReferences.Instance.UpdateHealth(fullHealth);
+        if (SaveSystem.LoadSaveGame())
+        {
+            SetData(SaveSystem.SaveData);
+        }
     }
 
     public void AddCoins()
@@ -38,13 +44,19 @@ public class Stats : MonoBehaviour
         UIReferences.Instance.UpdateCoins(coins);
     }
 
-    public void SetCoins(int amount)
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        UIReferences.Instance.UpdateCoins(coins);
+    }
+
+    void SetCoins(int amount)
     {
         coins = amount;
         UIReferences.Instance.UpdateCoins(coins);
     }
 
-    public void SetHealth(int savedHealth)
+    void SetHealth(int savedHealth)
     {
         health = savedHealth;
         UIReferences.Instance.UpdateHealth(health);
@@ -55,9 +67,12 @@ public class Stats : MonoBehaviour
         LevelUp();
     }
 
-    public void SetData()
+    void SetData(SaveData saveData)
     {
-        
+        SetCoins(saveData.Coins);
+        SetHealth(saveData.Health);
+        level = saveData.Level;
+        PlayerController.Instance.SetPosition(saveData.Position);
     }
 
     public void LevelUp()

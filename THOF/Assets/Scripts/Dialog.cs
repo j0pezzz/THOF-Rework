@@ -1,17 +1,18 @@
+using Internal;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
     [SerializeField] private Image enemyIcon;
-
-    string _talking;
+    [SerializeField] private TextMeshProUGUI enemyTalk;
 
     public GameObject logPanel;
-    public Text speech;
 
     public void StartDialog()
     {
+        enemyTalk.SetText(GameTexts.Dialog[Random.Range(0, GameTexts.Dialog.Length)]);
         logPanel.SetActive(true);
     }
 
@@ -27,11 +28,6 @@ public class Dialog : MonoBehaviour
     }
 
     public void Fight() => Battle.Instance.Begin();
-
-    public void TalkShit()
-    {
-        speech.text = _talking;
-    }
 
     private static Dialog _instance;
     public static Dialog Instance

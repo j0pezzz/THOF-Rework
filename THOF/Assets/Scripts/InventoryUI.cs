@@ -49,12 +49,12 @@ public class InventoryUI : MonoBehaviour
 
         if (!isOpen) return;
 
-        if (Shop.Instance.isOpen)
+        if (ShopUI.Instance.IsOpen())
         {
-            Shop.Instance.ToggleUI();
+            ShopUI.Instance.ToggleUI();
         }
 
-        if (ChestUI.Instance.isOpen)
+        if (ChestUI.Instance.IsOpen())
         {
             ChestUI.Instance.ToggleUI();
         }

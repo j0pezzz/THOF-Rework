@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Game/Internal/Game Data", fileName = "Game Data")]
@@ -17,4 +19,21 @@ public class GameData : ScriptableObject
             return _instance;
         }
     }
+
+#if UNITY_EDITOR
+    [MenuItem("THOF/Delete Save Game")]
+    static void DeleteGameSave()
+    {
+        string dataPath = Path.Combine(Application.persistentDataPath, "GameData.dat");
+
+        if (!File.Exists(dataPath))
+        {
+            Debug.Log("No save data to delete!");
+            return;
+        }
+        
+        File.Delete(dataPath);
+        Debug.Log("Save Game deleted successfully!");
+    }
+#endif
 }

@@ -42,6 +42,20 @@ public class ChestUI : MonoBehaviour
         }
     }
 
+    public void RemoveChestItem(string itemName)
+    {
+        GameObject chestItem = _cacheUI[itemName];
+
+        if (!chestItem)
+        {
+            Debug.LogError($"No item found with name {itemName}!");
+            return;
+        }
+        
+        Destroy(chestItem);
+        _cacheUI.Remove(itemName);
+    }
+
     void CleanUI()
     {
         foreach (var item in _cacheUI)

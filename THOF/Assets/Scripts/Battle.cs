@@ -26,8 +26,7 @@ public class Battle : MonoBehaviour
     int enemyAD;
     int enemyAS;
     private EnemyBase _currentEnemy;
-
-
+    
     void Start()
     {
         attack1.text = Stats.Instance.equippedItems[0].itemName;

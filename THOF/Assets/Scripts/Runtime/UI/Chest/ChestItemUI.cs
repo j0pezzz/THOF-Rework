@@ -1,3 +1,4 @@
+using Internal.Enums;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,10 +19,19 @@ namespace Runtime.UI.Chest
             itemName.SetText(item.identifier.ToUpperInvariant());
         }
 
-        //TODO: implement ability to take the item from the chest
         public void TakeItem()
         {
-            
+            switch (_cacheItem.type)
+            {
+                case ChestItemType.Coins:
+                    Stats.Instance.AddCoins(_cacheItem.amount);
+                    ChestUI.Instance.RemoveChestItem(_cacheItem.identifier);
+                    //TODO: implement a notification for getting *amount* of coins.
+                    break;
+                case ChestItemType.Weapon:
+                    //TODO: implement weapon pick up
+                    break;
+            }
         }
     }
 }

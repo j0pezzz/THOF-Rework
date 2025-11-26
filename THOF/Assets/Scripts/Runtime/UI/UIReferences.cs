@@ -39,7 +39,7 @@ public class UIReferences : MonoBehaviour
 
     public void UpdateCoins(int amount)
     {
-        
+        coinsText.SetText($"COINS: {amount}");
     }
 
     public void ActivateOpenShop()

@@ -19,7 +19,7 @@ public class Enemy : EnemyBase
     {
         if (!other.CompareTag("Player")) return;
         
-        UIReferences.Instance.ShowInteract(false);
-        PlayerController.Instance.EnemyRadius(false);
+        UIReferences.Instance?.ShowInteract(false);
+        PlayerController.Instance?.EnemyRadius(false);
     }
 }

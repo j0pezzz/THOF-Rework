@@ -27,7 +27,11 @@ public class Dialog : MonoBehaviour
         enemyIcon.sprite = sprite;
     }
 
-    public void Fight() => Battle.Instance.Begin();
+    public void Fight()
+    {
+        logPanel.SetActive(false);
+        Battle.Instance.Begin();
+    }
 
     private static Dialog _instance;
     public static Dialog Instance

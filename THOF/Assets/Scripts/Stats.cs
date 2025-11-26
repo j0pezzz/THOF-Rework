@@ -62,8 +62,18 @@ public class Stats : MonoBehaviour
         UIReferences.Instance.UpdateHealth(health);
     }
 
-    void Update()
+    /// <summary>
+    /// This is mainly used to reset player health back to default after a battle.
+    /// </summary>
+    public void ResetHealth()
     {
+        health = fullHealth;
+    }
+
+    public void IncreaseXp(int amount)
+    {
+        xp += amount;
+        
         LevelUp();
     }
 
@@ -75,16 +85,16 @@ public class Stats : MonoBehaviour
         PlayerController.Instance.SetPosition(saveData.Position);
     }
 
-    public void LevelUp()
+    void LevelUp()
     {
-        if (xp >= ofWhatXp)
-        {
-            level++;
-            xp = xp -= ofWhatXp;
-            ofWhatXp += 5;
-            skillPoints += 1;
-            fullHealth += 2;
-        }
+        // We haven't yet reached the required amount of xp to level up player.
+        if (xp < ofWhatXp) return;
+        
+        level++;
+        xp -= ofWhatXp;
+        ofWhatXp += 5;
+        skillPoints += 1;
+        fullHealth += 2;
     }
 
     public void UpgradeHealth()

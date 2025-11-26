@@ -1,30 +1,32 @@
 using System.Collections;
 using Internal;
 using Internal.Structures;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
+    [SerializeField] private GameObject content;
     [SerializeField] private Image enemyIcon;
-    public GameObject battlePanel;
-    public GameObject losePanel;
-    public GameObject xpGivenText;
-
+    [SerializeField] GameObject losePanel;
+    [SerializeField] TextMeshProUGUI xpGivenText;
+    [SerializeField] private TextMeshProUGUI enemyHpText;
 
     public Text attack1;
     public Text attack2;
     public Text attackE;
-    public Text enemyHPText;
-    public Text xpGiven;
     public Text coinsGiven;
 
     public bool isAttacking;
 
-    public int ogEH;
-    int enemyHP = 5;
-    int enemyAD;
-    int enemyAS;
+    /// <summary>
+    /// How much XP will the player get if they win?
+    /// </summary>
+    int _winXp;
+    int _enemyHp = 5;
+    int _enemyStrength;
+    int _enemySpeed;
     private EnemyBase _currentEnemy;
     
     void Start()
@@ -48,15 +50,16 @@ public class Battle : MonoBehaviour
             return;
         }
         
+        content.SetActive(true);
+        
         EventHandler.Player.OnPlayerDead += OnPlayerDead;
-        battlePanel.SetActive(true);
-        xpGivenText.SetActive(false);
+        xpGivenText.gameObject.SetActive(false);
 
-        enemyHP = _currentEnemy.Health;
-        enemyAS = _currentEnemy.Speed;
-        enemyAD = _currentEnemy.Strength;
-        ogEH = _currentEnemy.Health;
-        enemyHPText.text = enemyHP.ToString();
+        _enemyHp = _currentEnemy.Health;
+        _enemySpeed = _currentEnemy.Speed;
+        _enemyStrength = _currentEnemy.Strength;
+        _winXp = _currentEnemy.Health;
+        enemyHpText.SetText(_enemyHp.ToString());
     }
 
     void OnPlayerDead() => StartCoroutine(PlayerDead());
@@ -64,21 +67,22 @@ public class Battle : MonoBehaviour
     public void Stop()
     {
         EventHandler.Player.OnPlayerDead -= OnPlayerDead;
-        battlePanel.SetActive(false);
+        content.SetActive(false);
+
+        Stats.Instance.ResetHealth();
         PlayerController.Instance.inAction = false;
         isAttacking = false;
-        Stats.Instance.health = Stats.Instance.fullHealth;
     }
 
     IEnumerator BattleOver()
     {
         yield return new WaitForSeconds(1);
+        content.SetActive(false);
         losePanel.SetActive(false);
-        battlePanel.SetActive(false);
         isAttacking = false;
         PlayerController.Instance.inAction = false;
-        Stats.Instance.health = Stats.Instance.fullHealth;
-        xpGivenText.SetActive(false);
+        Stats.Instance.ResetHealth();
+        xpGivenText.gameObject.SetActive(false);
     }
 
     IEnumerator PlayerDead()
@@ -90,32 +94,29 @@ public class Battle : MonoBehaviour
 
     IEnumerator EnemyDead()
     {
-        xpGiven.text = ogEH + "xp earned";
+        xpGivenText.SetText($"{_winXp} XP FROM BATTLE");
         _currentEnemy.IsFightable = false;
         
-        xpGivenText.SetActive(true);
+        xpGivenText.gameObject.SetActive(true);
         coinsGiven.enabled = true;
         coinsGiven.text = $"{Stats.Instance.coinsAfter} coins";
         Stats.Instance.AddCoins();
+        Stats.Instance.IncreaseXp(_winXp);
+
         yield return new WaitForSeconds(1);
-        xpGivenText.SetActive(false);
+        
+        xpGivenText.gameObject.SetActive(false);
         coinsGiven.enabled = false;
         StartCoroutine(BattleOver());
-        GiveXp();
-    }
-
-    void GiveXp()
-    {
-        Stats.Instance.xp += ogEH;
     }
 
     void ReduceEnemyHealth(int minusHealth)
     {
-        enemyHP = Mathf.Clamp(enemyHP - minusHealth, 0, _currentEnemy.Health);
+        _enemyHp = Mathf.Clamp(_enemyHp - minusHealth, 0, _currentEnemy.Health);
         
-        enemyHPText.text = enemyHP.ToString();
+        enemyHpText.SetText(_enemyHp.ToString());
 
-        if (enemyHP <= 0)
+        if (_enemyHp <= 0)
         {
             StartCoroutine(EnemyDead());
         }
@@ -150,22 +151,22 @@ public class Battle : MonoBehaviour
         int speed = Stats.Instance.speed + Stats.Instance.equippedItems[0].speedIncrease;
         int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[0].strengthIncrease;
         
-        if (speed >= enemyAS)
+        if (speed >= _enemySpeed)
         {
             ReduceEnemyHealth(strength);
             yield return new WaitForSeconds(1);
 
-            if (enemyHP > 0)
+            if (_enemyHp > 0)
             {
-                Stats.Instance.ReduceHealth(enemyAD);
+                Stats.Instance.ReduceHealth(_enemyStrength);
             }
 
             isAttacking = false;
         }
 
-        else if (speed< enemyAS)
+        else if (speed< _enemySpeed)
         {
-            Stats.Instance.ReduceHealth(enemyAD);
+            Stats.Instance.ReduceHealth(_enemyStrength);
             yield return new WaitForSeconds(1);
 
             if (Stats.Instance.health > 0)
@@ -182,21 +183,21 @@ public class Battle : MonoBehaviour
         int speed = Stats.Instance.speed + Stats.Instance.equippedItems[1].speedIncrease;
         int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[1].strengthIncrease;
         
-        if (speed >= enemyAS)
+        if (speed >= _enemySpeed)
         {
             ReduceEnemyHealth(strength);
             yield return new WaitForSeconds(1);
 
-            if (enemyHP > 0)
+            if (_enemyHp > 0)
             {
-                Stats.Instance.ReduceHealth(enemyAD);
+                Stats.Instance.ReduceHealth(_enemyStrength);
             }
 
             isAttacking = false;
         }
-        else if (speed < enemyAS)
+        else if (speed < _enemySpeed)
         {
-            Stats.Instance.ReduceHealth(enemyAD);
+            Stats.Instance.ReduceHealth(_enemyStrength);
             yield return new WaitForSeconds(1);
 
             if (Stats.Instance.health > 0)
@@ -214,7 +215,7 @@ public class Battle : MonoBehaviour
         int strength = Stats.Instance.strenght + Stats.Instance.equippedItems[2].strengthIncrease;
         int healing = Stats.Instance.healing + Stats.Instance.equippedItems[2].healthIncrease;
         
-        if (speed >= enemyAS)
+        if (speed >= _enemySpeed)
         {
             ReduceEnemyHealth(strength);
 
@@ -225,16 +226,16 @@ public class Battle : MonoBehaviour
             
             yield return new WaitForSeconds(1);
 
-            if (enemyHP > 0)
+            if (_enemyHp > 0)
             {
-                Stats.Instance.ReduceHealth(enemyAD);
+                Stats.Instance.ReduceHealth(_enemyStrength);
             }
 
             isAttacking = false;
         }
-        else if (speed < enemyAS)
+        else if (speed < _enemySpeed)
         {
-            Stats.Instance.ReduceHealth(enemyAD);
+            Stats.Instance.ReduceHealth(_enemyStrength);
             yield return new WaitForSeconds(1);
 
             if (Stats.Instance.health > 0)

@@ -1,21 +1,21 @@
 {
   "context": {
     "projectPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages",
-    "unityVersion": "6000.2.13f1"
+    "unityVersion": "6000.3.21f1"
   },
   "inputs": [
     "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/manifest.json",
     "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/packages-lock.json",
-    "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
+    "/home/j0pezz/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
-    "com.unity.2d.animation@12.0.3": {
+    "com.unity.2d.animation@13.0.5": {
       "name": "com.unity.2d.animation",
       "displayName": "2D Animation",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.animation@fd6eeea117b7",
-      "fingerprint": "fd6eeea117b7165f48ae1442d07c9a10c4d757f3",
-      "editorCompatibility": "6000.2.0a1",
-      "version": "12.0.3",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.animation@5d1ab6c077e2",
+      "fingerprint": "5d1ab6c077e280b8e48244a02bc9cd8d7af63d42",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "13.0.5",
       "source": "registry",
       "testable": false
     },
@@ -29,111 +29,131 @@
       "source": "registry",
       "testable": false
     },
-    "com.unity.2d.psdimporter@11.0.2": {
+    "com.unity.2d.psdimporter@12.0.2": {
       "name": "com.unity.2d.psdimporter",
       "displayName": "2D PSD Importer",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.psdimporter@ee412f80a276",
-      "fingerprint": "ee412f80a276d6ee7acd681b5661a959561261be",
-      "editorCompatibility": "6000.2.0a10",
-      "version": "11.0.2",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.psdimporter@f207d91d598d",
+      "fingerprint": "f207d91d598dbf43af8d25dec9312e71ece7531a",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "12.0.2",
       "source": "registry",
       "testable": false
     },
     "com.unity.2d.sprite@1.0.0": {
       "name": "com.unity.2d.sprite",
       "displayName": "2D Sprite",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.sprite@ec779eb7e23a",
-      "fingerprint": "ec779eb7e23a28a2548503f223b3ca124d5d91db",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.sprite@73849065abf4",
+      "fingerprint": "73849065abf40e1a918cf44cd26c5fdfd511a8dc",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
     },
-    "com.unity.2d.spriteshape@12.0.2": {
+    "com.unity.2d.spriteshape@13.0.0": {
       "name": "com.unity.2d.spriteshape",
       "displayName": "2D SpriteShape",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.spriteshape@f4325e58176b",
-      "fingerprint": "f4325e58176b754d8b01f2936fa8cc95e464f2c1",
-      "editorCompatibility": "6000.2.0a10",
-      "version": "12.0.2",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.spriteshape@0738bab11647",
+      "fingerprint": "0738bab116473980325be8cdb7c3c42ab6961778",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "13.0.0",
       "source": "registry",
       "testable": false
     },
     "com.unity.2d.tilemap@1.0.0": {
       "name": "com.unity.2d.tilemap",
       "displayName": "2D Tilemap Editor",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@dadfd5fd938d",
-      "fingerprint": "dadfd5fd938d2dd03f2361f0bec8d320424d2d63",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@8408a42479ba",
+      "fingerprint": "8408a42479ba67de1c7ec437aae96c5518cb3a8b",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
     },
-    "com.unity.ai.navigation@2.0.9": {
+    "com.unity.ai.navigation@2.0.14": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ai.navigation@5218e4bf7edc",
-      "fingerprint": "5218e4bf7edc04fcad4ed3836c1c41aef334b996",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ai.navigation@134dd6a3b97b",
+      "fingerprint": "134dd6a3b97bb75be809e267fbcd9c5071579dd2",
       "editorCompatibility": "6000.0.0a1",
-      "version": "2.0.9",
+      "version": "2.0.14",
       "source": "registry",
       "testable": false
     },
-    "com.unity.ide.rider@3.0.38": {
+    "com.unity.ide.rider@3.0.40": {
       "name": "com.unity.ide.rider",
       "displayName": "JetBrains Rider Editor",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ide.rider@1f60b3138684",
-      "fingerprint": "1f60b3138684c97af67aa8d911b1632ba916d29d",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ide.rider@e4950c6d131b",
+      "fingerprint": "e4950c6d131b925f19dd0b34bdf800110120f8de",
       "editorCompatibility": "2021.3.0a1",
-      "version": "3.0.38",
+      "version": "3.0.40",
       "source": "registry",
       "testable": false
     },
-    "com.unity.multiplayer.center@1.0.0": {
+    "com.unity.inputsystem@1.20.0": {
+      "name": "com.unity.inputsystem",
+      "displayName": "Input System",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.inputsystem@7a4e1a2a8194",
+      "fingerprint": "7a4e1a2a81941121ffc0721a14009b46299dada1",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.20.0",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.multiplayer.center@1.0.1": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.multiplayer.center@f5e57a8bed06",
-      "fingerprint": "f5e57a8bed0637672c58142b1bfd7e6fea03746c",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.multiplayer.center@53ad5a5c2bfb",
+      "fingerprint": "53ad5a5c2bfb024bdca1188770c49ab70cef8c69",
       "editorCompatibility": "6000.0.0a1",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": "builtin",
+      "testable": false
+    },
+    "com.unity.sdk.linux-x86_64@1.1.0": {
+      "name": "com.unity.sdk.linux-x86_64",
+      "displayName": "Sysroot Linux x64",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.sdk.linux-x86_64@6d12be270055",
+      "fingerprint": "6d12be2700550fd0c1b18d757f7b424ceb5b0858",
+      "editorCompatibility": "6000.3.0b8",
+      "version": "1.1.0",
+      "source": "registry",
       "testable": false
     },
     "com.unity.test-framework@1.6.0": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework@ec3b9352d485",
-      "fingerprint": "ec3b9352d4857ad21949bab695ad12ab73fc6af6",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework@0bd5c5194236",
+      "fingerprint": "0bd5c5194236ede2b7685c1a7fcb3d60de58583a",
       "editorCompatibility": "6000.0.44f1",
       "version": "1.6.0",
       "source": "builtin",
       "testable": false
     },
-    "com.unity.timeline@1.8.9": {
+    "com.unity.timeline@1.8.12": {
       "name": "com.unity.timeline",
       "displayName": "Timeline",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.timeline@6b9e48457ddb",
-      "fingerprint": "6b9e48457ddb4f64813d77fd77efc79a8f3102ae",
-      "editorCompatibility": "2021.3.0a1",
-      "version": "1.8.9",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.timeline@8cd8509afae5",
+      "fingerprint": "8cd8509afae5d2655af4657a214db1b563c28425",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "1.8.12",
       "source": "registry",
       "testable": false
     },
-    "com.unity.toolchain.linux-x86_64@2.0.11": {
-      "name": "com.unity.toolchain.linux-x86_64",
-      "displayName": "Toolchain Linux x64",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.toolchain.linux-x86_64@53b88ff74b51",
-      "fingerprint": "53b88ff74b51ed43afb11336ab6f5495d1f91478",
-      "editorCompatibility": "2019.4.0a1",
-      "version": "2.0.11",
+    "com.unity.toolchain.linux-x86_64-linux@1.1.0": {
+      "name": "com.unity.toolchain.linux-x86_64-linux",
+      "displayName": "Toolchain Linux x64 Host for Linux Targets",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.toolchain.linux-x86_64-linux@d0308bf9d559",
+      "fingerprint": "d0308bf9d55943c037b0c72354dff42cc5ff401b",
+      "editorCompatibility": "6000.3.0b8",
+      "version": "1.1.0",
       "source": "registry",
       "testable": false
     },
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
-      "displayName": "Unity UI",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@fe9df2e66331",
-      "fingerprint": "fe9df2e6633125e9febf92b2d5307736138bcc37",
+      "displayName": "uGUI",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@5e3c170cdd2e",
+      "fingerprint": "5e3c170cdd2efb94f04206847316467597618f42",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
       "source": "builtin",
@@ -142,7 +162,15 @@
     "com.unity.modules.accessibility@1.0.0": {
       "name": "com.unity.modules.accessibility",
       "displayName": "Accessibility",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.accessibility",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.adaptiveperformance@1.0.0": {
+      "name": "com.unity.modules.adaptiveperformance",
+      "displayName": "Adaptive Performance",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.adaptiveperformance",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -150,7 +178,7 @@
     "com.unity.modules.ai@1.0.0": {
       "name": "com.unity.modules.ai",
       "displayName": "AI",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.ai",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -158,7 +186,7 @@
     "com.unity.modules.androidjni@1.0.0": {
       "name": "com.unity.modules.androidjni",
       "displayName": "Android JNI",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.androidjni",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -166,7 +194,7 @@
     "com.unity.modules.animation@1.0.0": {
       "name": "com.unity.modules.animation",
       "displayName": "Animation",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.animation",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -174,7 +202,7 @@
     "com.unity.modules.assetbundle@1.0.0": {
       "name": "com.unity.modules.assetbundle",
       "displayName": "Asset Bundle",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.assetbundle",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -182,7 +210,7 @@
     "com.unity.modules.audio@1.0.0": {
       "name": "com.unity.modules.audio",
       "displayName": "Audio",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.audio",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -190,7 +218,7 @@
     "com.unity.modules.director@1.0.0": {
       "name": "com.unity.modules.director",
       "displayName": "Director",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.director",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.director",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -198,7 +226,7 @@
     "com.unity.modules.imageconversion@1.0.0": {
       "name": "com.unity.modules.imageconversion",
       "displayName": "Image Conversion",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.imageconversion",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -206,7 +234,7 @@
     "com.unity.modules.imgui@1.0.0": {
       "name": "com.unity.modules.imgui",
       "displayName": "IMGUI",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.imgui",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -214,7 +242,7 @@
     "com.unity.modules.jsonserialize@1.0.0": {
       "name": "com.unity.modules.jsonserialize",
       "displayName": "JSONSerialize",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.jsonserialize",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -222,7 +250,7 @@
     "com.unity.modules.particlesystem@1.0.0": {
       "name": "com.unity.modules.particlesystem",
       "displayName": "Particle System",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.particlesystem",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -230,7 +258,7 @@
     "com.unity.modules.physics@1.0.0": {
       "name": "com.unity.modules.physics",
       "displayName": "Physics",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.physics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -238,7 +266,7 @@
     "com.unity.modules.physics2d@1.0.0": {
       "name": "com.unity.modules.physics2d",
       "displayName": "Physics 2D",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.physics2d",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -246,7 +274,7 @@
     "com.unity.modules.terrain@1.0.0": {
       "name": "com.unity.modules.terrain",
       "displayName": "Terrain",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.terrain",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -254,7 +282,7 @@
     "com.unity.modules.terrainphysics@1.0.0": {
       "name": "com.unity.modules.terrainphysics",
       "displayName": "Terrain Physics",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.terrainphysics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -262,7 +290,7 @@
     "com.unity.modules.tilemap@1.0.0": {
       "name": "com.unity.modules.tilemap",
       "displayName": "Tilemap",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.tilemap",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -270,7 +298,7 @@
     "com.unity.modules.ui@1.0.0": {
       "name": "com.unity.modules.ui",
       "displayName": "UI",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.ui",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -278,7 +306,7 @@
     "com.unity.modules.uielements@1.0.0": {
       "name": "com.unity.modules.uielements",
       "displayName": "UIElements",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.uielements",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -286,7 +314,7 @@
     "com.unity.modules.umbra@1.0.0": {
       "name": "com.unity.modules.umbra",
       "displayName": "Umbra",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.umbra",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -294,7 +322,7 @@
     "com.unity.modules.unityanalytics@1.0.0": {
       "name": "com.unity.modules.unityanalytics",
       "displayName": "Unity Analytics",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unityanalytics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -302,7 +330,7 @@
     "com.unity.modules.unitywebrequest@1.0.0": {
       "name": "com.unity.modules.unitywebrequest",
       "displayName": "Unity Web Request",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unitywebrequest",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -310,7 +338,7 @@
     "com.unity.modules.unitywebrequestassetbundle@1.0.0": {
       "name": "com.unity.modules.unitywebrequestassetbundle",
       "displayName": "Unity Web Request Asset Bundle",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -318,7 +346,7 @@
     "com.unity.modules.unitywebrequestaudio@1.0.0": {
       "name": "com.unity.modules.unitywebrequestaudio",
       "displayName": "Unity Web Request Audio",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unitywebrequestaudio",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -326,7 +354,7 @@
     "com.unity.modules.unitywebrequesttexture@1.0.0": {
       "name": "com.unity.modules.unitywebrequesttexture",
       "displayName": "Unity Web Request Texture",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unitywebrequesttexture",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -334,7 +362,15 @@
     "com.unity.modules.unitywebrequestwww@1.0.0": {
       "name": "com.unity.modules.unitywebrequestwww",
       "displayName": "Unity Web Request WWW",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.unitywebrequestwww",
+      "version": "1.0.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.modules.vectorgraphics@1.0.0": {
+      "name": "com.unity.modules.vectorgraphics",
+      "displayName": "Vector Graphics",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.vectorgraphics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -342,98 +378,96 @@
     "com.unity.modules.hierarchycore@1.0.0": {
       "name": "com.unity.modules.hierarchycore",
       "displayName": "Hierarchy Core",
-      "resolvedPath": "/home/j0pezz/Unity/Hub/Editor/6000.2.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.hierarchycore",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
     },
-    "com.unity.sysroot@2.0.10": {
-      "name": "com.unity.sysroot",
-      "displayName": "Sysroot Base",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.sysroot@7bbbb9339c14",
-      "fingerprint": "7bbbb9339c143f6fbccaeb0a52c77b9217b35a71",
-      "editorCompatibility": "2019.4.0a1",
-      "version": "2.0.10",
-      "source": "registry",
+    "com.unity.modules.subsystems@1.0.0": {
+      "name": "com.unity.modules.subsystems",
+      "displayName": "Subsystems",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.subsystems",
+      "version": "1.0.0",
+      "source": "builtin",
       "testable": false
     },
-    "com.unity.sysroot.linux-x86_64@2.0.9": {
-      "name": "com.unity.sysroot.linux-x86_64",
-      "displayName": "Sysroot Linux x64",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.sysroot.linux-x86_64@1998d1c7730e",
-      "fingerprint": "1998d1c7730e48fa49f28d983fececfc9cbd970b",
-      "editorCompatibility": "2019.4.0a1",
-      "version": "2.0.9",
+    "com.unity.sysroot.base@1.1.0": {
+      "name": "com.unity.sysroot.base",
+      "displayName": "Sysroot Base",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.sysroot.base@3559fe1aa613",
+      "fingerprint": "3559fe1aa613d71488a800cc1ce582e67d7d806a",
+      "editorCompatibility": "6000.3.0b8",
+      "version": "1.1.0",
       "source": "registry",
       "testable": false
     },
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ext.nunit@b16e6d09cd93",
-      "fingerprint": "b16e6d09cd93f527249a1f05a86ef45695dc934b",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc",
+      "fingerprint": "ec2d0043d6fc7a6d17671dfca00f9c303b1d735f",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.5",
       "source": "builtin",
       "testable": false
     },
-    "com.unity.2d.common@11.0.1": {
+    "com.unity.2d.common@12.0.3": {
       "name": "com.unity.2d.common",
       "displayName": "2D Common",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.common@dd402daace1b",
-      "fingerprint": "dd402daace1b7dbeb70cb9e7ae044cc4b10f989a",
-      "editorCompatibility": "6000.2.0a9",
-      "version": "11.0.1",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.common@2af7c9b44b5c",
+      "fingerprint": "2af7c9b44b5c0734073acb3fd3efc0a050c7b62e",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "12.0.3",
       "source": "registry",
       "testable": false
     },
-    "com.unity.mathematics@1.3.2": {
+    "com.unity.mathematics@1.3.3": {
       "name": "com.unity.mathematics",
       "displayName": "Mathematics",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.mathematics@8017b507cc74",
-      "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.mathematics@19a9377c4ffa",
+      "fingerprint": "19a9377c4ffa59370edad3e6a34e4445529badde",
       "editorCompatibility": "2021.3.0a1",
-      "version": "1.3.2",
+      "version": "1.3.3",
       "source": "registry",
       "testable": false
     },
-    "com.unity.collections@2.6.2": {
+    "com.unity.collections@2.6.8": {
       "name": "com.unity.collections",
       "displayName": "Collections",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@aea9d3bd5e19",
-      "fingerprint": "aea9d3bd5e19f2a90fc3a39919974a5f3613a159",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@84e8eb3fc12e",
+      "fingerprint": "84e8eb3fc12e12e29c3b3d102c904e2f8f2ca6e5",
       "editorCompatibility": "2022.3.20f1",
-      "version": "2.6.2",
+      "version": "2.6.8",
       "source": "registry",
       "testable": false
     },
-    "com.unity.burst@1.8.25": {
+    "com.unity.burst@1.8.30": {
       "name": "com.unity.burst",
       "displayName": "Burst",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@1df634d836b8",
-      "fingerprint": "1df634d836b8106f13dc82401a91b336d615a874",
-      "editorCompatibility": "2021.3.0a1",
-      "version": "1.8.25",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@2f3d916873ea",
+      "fingerprint": "2f3d916873ea867ff077372df3fe42447ba7d4c6",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.8.30",
       "source": "registry",
       "testable": false
     },
-    "com.unity.nuget.mono-cecil@1.11.5": {
+    "com.unity.nuget.mono-cecil@1.11.6": {
       "name": "com.unity.nuget.mono-cecil",
       "displayName": "Mono Cecil",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb",
-      "fingerprint": "d78732e851eb42273c8e4d97993d3a94b207e570",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff",
+      "fingerprint": "ecb9724e46fff855c46a4f37f0a3377a3cfffc06",
       "editorCompatibility": "2019.4.0a1",
-      "version": "1.11.5",
+      "version": "1.11.6",
       "source": "registry",
       "testable": false
     },
-    "com.unity.test-framework.performance@3.2.0": {
+    "com.unity.test-framework.performance@3.5.0": {
       "name": "com.unity.test-framework.performance",
       "displayName": "Performance testing API",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework.performance@0840f58e4562",
-      "fingerprint": "0840f58e45624f7677679a0f8b6a5137689e607f",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0",
+      "fingerprint": "8b56083ec0f03c33121bea5c806c91b0fa2f2b69",
       "editorCompatibility": "2020.3.0a1",
-      "version": "3.2.0",
+      "version": "3.5.0",
       "source": "registry",
       "testable": false
     }

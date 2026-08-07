@@ -1,12 +1,12 @@
 {
   "context": {
     "projectPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages",
-    "unityVersion": "6000.3.21f1"
+    "unityVersion": "6000.3.19f1"
   },
   "inputs": [
     "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/manifest.json",
     "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/packages-lock.json",
-    "/home/j0pezz/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
+    "/home/j0pezz/Unity/Hub/Editor/6000.3.19f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.2d.animation@13.0.5": {
@@ -62,8 +62,8 @@
     "com.unity.2d.tilemap@1.0.0": {
       "name": "com.unity.2d.tilemap",
       "displayName": "2D Tilemap Editor",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@8408a42479ba",
-      "fingerprint": "8408a42479ba67de1c7ec437aae96c5518cb3a8b",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@1460a342b65a",
+      "fingerprint": "1460a342b65ad62d660327788f9c5caabe75ea61",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
@@ -97,16 +97,6 @@
       "editorCompatibility": "6000.0.0a1",
       "version": "1.20.0",
       "source": "registry",
-      "testable": false
-    },
-    "com.unity.multiplayer.center@1.0.1": {
-      "name": "com.unity.multiplayer.center",
-      "displayName": "Multiplayer Center",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.multiplayer.center@53ad5a5c2bfb",
-      "fingerprint": "53ad5a5c2bfb024bdca1188770c49ab70cef8c69",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "1.0.1",
-      "source": "builtin",
       "testable": false
     },
     "com.unity.sdk.linux-x86_64@1.1.0": {
@@ -152,8 +142,8 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "uGUI",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@5e3c170cdd2e",
-      "fingerprint": "5e3c170cdd2efb94f04206847316467597618f42",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@54a524a91133",
+      "fingerprint": "54a524a9113387bc3edadba27d03b78f6048aa6b",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
       "source": "builtin",
@@ -163,14 +153,6 @@
       "name": "com.unity.modules.accessibility",
       "displayName": "Accessibility",
       "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.accessibility",
-      "version": "1.0.0",
-      "source": "builtin",
-      "testable": false
-    },
-    "com.unity.modules.adaptiveperformance@1.0.0": {
-      "name": "com.unity.modules.adaptiveperformance",
-      "displayName": "Adaptive Performance",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.adaptiveperformance",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -383,14 +365,6 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.modules.subsystems@1.0.0": {
-      "name": "com.unity.modules.subsystems",
-      "displayName": "Subsystems",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.subsystems",
-      "version": "1.0.0",
-      "source": "builtin",
-      "testable": false
-    },
     "com.unity.sysroot.base@1.1.0": {
       "name": "com.unity.sysroot.base",
       "displayName": "Sysroot Base",
@@ -431,23 +405,23 @@
       "source": "registry",
       "testable": false
     },
-    "com.unity.collections@2.6.8": {
+    "com.unity.collections@2.6.6": {
       "name": "com.unity.collections",
       "displayName": "Collections",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@84e8eb3fc12e",
-      "fingerprint": "84e8eb3fc12e12e29c3b3d102c904e2f8f2ca6e5",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@9796e5ee0d9e",
+      "fingerprint": "9796e5ee0d9ef6933fcf11656c00048965f09994",
       "editorCompatibility": "2022.3.20f1",
-      "version": "2.6.8",
+      "version": "2.6.6",
       "source": "registry",
       "testable": false
     },
-    "com.unity.burst@1.8.30": {
+    "com.unity.burst@1.8.29": {
       "name": "com.unity.burst",
       "displayName": "Burst",
-      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@2f3d916873ea",
-      "fingerprint": "2f3d916873ea867ff077372df3fe42447ba7d4c6",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "1.8.30",
+      "resolvedPath": "/home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@6bb9aca3ef38",
+      "fingerprint": "6bb9aca3ef382e98bd0c1e4ab5fc74380c16095f",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "1.8.29",
       "source": "registry",
       "testable": false
     },

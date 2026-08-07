@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639217005690000000
-    m_Hash: 3033910176
+      ticks: 639217008820000000
+    m_Hash: 3801062648
   m_LockFileStatus:
     m_FilePath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639217005690000000
-    m_Hash: 3964831091
+      ticks: 639217031390000000
+    m_Hash: 1210296218
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Packages
-m_EditorVersion: 6000.3.21f1 (c02631ffc030)
+m_EditorVersion: 6000.3.19f1 (7689f4515d75)
 m_ResolvedPackages:
 - packageId: com.unity.2d.animation@13.0.5
   testable: 0
@@ -221,7 +221,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 12.0.3
   - name: com.unity.burst
-    version: 1.8.30
+    version: 1.8.29
   - name: com.unity.mathematics
     version: 1.3.3
   - name: com.unity.modules.jsonserialize
@@ -229,7 +229,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
-    version: 2.6.8
+    version: 2.6.6
   - name: com.unity.test-framework
     version: 1.6.0
   - name: com.unity.ext.nunit
@@ -606,7 +606,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 12.0.3
   - name: com.unity.burst
-    version: 1.8.30
+    version: 1.8.29
   - name: com.unity.mathematics
     version: 1.3.3
   - name: com.unity.modules.jsonserialize
@@ -614,7 +614,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
-    version: 2.6.8
+    version: 2.6.6
   - name: com.unity.test-framework
     version: 1.6.0
   - name: com.unity.ext.nunit
@@ -944,7 +944,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.common
     version: 12.0.3
   - name: com.unity.burst
-    version: 1.8.30
+    version: 1.8.29
   - name: com.unity.mathematics
     version: 1.3.3
   - name: com.unity.modules.jsonserialize
@@ -952,7 +952,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
-    version: 2.6.8
+    version: 2.6.6
   - name: com.unity.test-framework
     version: 1.6.0
   - name: com.unity.ext.nunit
@@ -1053,7 +1053,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@8408a42479ba
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.2d.tilemap@1460a342b65a
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -1147,7 +1147,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 8408a42479ba67de1c7ec437aae96c5518cb3a8b
+  fingerprint: 1460a342b65ad62d660327788f9c5caabe75ea61
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -1208,6 +1208,7 @@ m_ResolvedPackages:
     - 2.0.13
     - 2.0.14
     compatible:
+    - 2.0.13
     - 2.0.14
     recommended: 2.0.14
     deprecated: []
@@ -1260,7 +1261,7 @@ m_ResolvedPackages:
     revision: 4ee1d652d94787ec330eb1706d9f63e885c9427f
     path: 
   unityLifecycle:
-    version: 2.0.14
+    version: 2.0.13
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1295,7 +1296,7 @@ m_ResolvedPackages:
   fingerprint: 134dd6a3b97bb75be809e267fbcd9c5071579dd2
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.0.14
+    minimumPackageVersion: 2.0.13
     minimumUnityVersion: 6000.0
   compliance:
     status: 0
@@ -1531,8 +1532,9 @@ m_ResolvedPackages:
     - 1.19.0
     - 1.20.0
     compatible:
+    - 1.19.0
     - 1.20.0
-    recommended: 1.20.0
+    recommended: 1.19.0
     deprecated: []
   dependencies:
   - name: com.unity.modules.uielements
@@ -1583,7 +1585,7 @@ m_ResolvedPackages:
     revision: 27757ebb14c0659ce1dbe39822ce97b33adea6c9
     path: 
   unityLifecycle:
-    version: 1.20.0
+    version: 1.19.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1658,114 +1660,7 @@ m_ResolvedPackages:
   fingerprint: 7a4e1a2a81941121ffc0721a14009b46299dada1
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.20.0
-    minimumUnityVersion: 6000.0
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.multiplayer.center@1.0.1
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.1
-  source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.multiplayer.center@53ad5a5c2bfb
-  assetPath: Packages/com.unity.multiplayer.center
-  name: com.unity.multiplayer.center
-  displayName: Multiplayer Center
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: The multiplayer center provides a starting point to create multiplayer
-    games. It will recommend specific packages and enable you to easily access integrations,
-    samples and documentation.
-  errors: []
-  versions:
-    all:
-    - 1.0.1
-    compatible:
-    - 1.0.1
-    recommended: 1.0.1
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.hierarchycore
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
-  keywords:
-  - Multiplayer
-  - Netcode
-  - Services
-  - Tools
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-    isDiscoverable: 1
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  signature:
-    status: 0
-    reason: 
-    attestation:
-      format: 
-      publishingChannel: 
-      entitlementKeys: []
-      ownerOrgName: 
-      ownerOrgId: 
-      publisherName: 
-    errorCode: 
-  assetStore:
-    productId: 
-  fingerprint: 53ad5a5c2bfb024bdca1188770c49ab70cef8c69
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.1
+    minimumPackageVersion: 1.19.0
     minimumUnityVersion: 6000.0
   compliance:
     status: 0
@@ -2279,7 +2174,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@5e3c170cdd2e
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.ugui@54a524a91133
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: uGUI
@@ -2370,7 +2265,7 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 5e3c170cdd2efb94f04206847316467597618f42
+  fingerprint: 54a524a9113387bc3edadba27d03b78f6048aa6b
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -2408,100 +2303,6 @@ m_ResolvedPackages:
     deprecated: []
   dependencies: []
   resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-    isDiscoverable: 1
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  signature:
-    status: 0
-    reason: 
-    attestation:
-      format: 
-      publishingChannel: 
-      entitlementKeys: []
-      ownerOrgName: 
-      ownerOrgId: 
-      publisherName: 
-    errorCode: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
-- packageId: com.unity.modules.adaptiveperformance@1.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.adaptiveperformance
-  assetPath: Packages/com.unity.modules.adaptiveperformance
-  name: com.unity.modules.adaptiveperformance
-  displayName: Adaptive Performance
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'Adaptive Performance is a built-in module that allows users to adjust
-    settings based on performance metrics. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.AdaptivePerformanceModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
   keywords: []
   registry:
     id: main
@@ -4963,98 +4764,6 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.modules.subsystems@1.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.0
-  source: 2
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.modules.subsystems
-  assetPath: Packages/com.unity.modules.subsystems
-  name: com.unity.modules.subsystems
-  displayName: Subsystems
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: module
-  description: 'The Subsystem module contains the definitions and runtime support
-    for general subsystems in Unity. Scripting API: https://docs.unity3d.com/ScriptReference/UnityEngine.SubsystemsModule.html'
-  errors: []
-  versions:
-    all:
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-    compliance:
-      status: 0
-      violations: []
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-    isDiscoverable: 0
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  signature:
-    status: 0
-    reason: 
-    attestation:
-      format: 
-      publishingChannel: 
-      entitlementKeys: []
-      ownerOrgName: 
-      ownerOrgId: 
-      publisherName: 
-    errorCode: 
-  assetStore:
-    productId: 
-  fingerprint: 
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 
-  compliance:
-    status: 0
-    violation:
-      scopePatternExpression: 
-      message: 
-      readMoreLink: 
 - packageId: com.unity.sysroot.base@1.1.0
   testable: 0
   isDirectDependency: 0
@@ -5359,7 +5068,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.30
+    version: 1.8.29
   - name: com.unity.mathematics
     version: 1.3.3
   - name: com.unity.modules.jsonserialize
@@ -5367,7 +5076,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
-    version: 2.6.8
+    version: 2.6.6
   - name: com.unity.test-framework
     version: 1.6.0
   - name: com.unity.ext.nunit
@@ -5566,12 +5275,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.collections@2.6.8
+- packageId: com.unity.collections@2.6.6
   testable: 0
   isDirectDependency: 0
-  version: 2.6.8
+  version: 2.6.6
   source: 1
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@84e8eb3fc12e
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.collections@9796e5ee0d9e
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -5671,12 +5380,14 @@ m_ResolvedPackages:
     - 2.6.7
     - 2.6.8
     compatible:
+    - 2.6.6
+    - 2.6.7
     - 2.6.8
     recommended: 2.6.8
     deprecated: []
   dependencies:
   - name: com.unity.burst
-    version: 1.8.29
+    version: 1.8.28
   - name: com.unity.mathematics
     version: 1.3.2
   - name: com.unity.test-framework
@@ -5687,7 +5398,7 @@ m_ResolvedPackages:
     version: 3.0.3
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.30
+    version: 1.8.29
   - name: com.unity.mathematics
     version: 1.3.3
   - name: com.unity.modules.jsonserialize
@@ -5721,16 +5432,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 639198054273250000
+  datePublishedTicks: 639126363706650000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.collections@2.6/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/dots.git
-    revision: 4a34d600ff4a191ed22ac899ab955d96d7c683f7
+    revision: 233b7df164f9829fad832775f3875c0379155347
     path: 
   unityLifecycle:
-    version: 2.6.8
+    version: 2.6.6
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5741,11 +5452,10 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Changed\n\n* Updated the `com.unity.entities` dependency
-    to version `1.4.8`\n\n### Removed\n\n* Removed the `System.IO.Hashing.dll` and
-    `System.Runtime.CompilerServices.Unsafe.dll` precompiled assemblies from the
-    package. This avoids compile errors that could occur if those DLLs were included
-    multiple times in a project."}'
+  upmReserved: '{"changelog":"### Changed\n\n* Updated the `com.unity.burst` dependency
+    to version `1.8.28`\n\n\n### Fixed\n\n* NativeBitArray and UnsafeBitArray now
+    correctly find contiguous sequences of 0-bits up to 6 bits in length.\n\n###
+    Security"}'
   signature:
     status: 1
     reason: Signature is ok
@@ -5759,10 +5469,10 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 84e8eb3fc12e12e29c3b3d102c904e2f8f2ca6e5
+  fingerprint: 9796e5ee0d9ef6933fcf11656c00048965f09994
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.6.8
+    minimumPackageVersion: 2.6.6
     minimumUnityVersion: 2022.3.20f1
   compliance:
     status: 0
@@ -5770,12 +5480,12 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-- packageId: com.unity.burst@1.8.30
+- packageId: com.unity.burst@1.8.29
   testable: 0
   isDirectDependency: 0
-  version: 1.8.30
+  version: 1.8.29
   source: 1
-  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@2f3d916873ea
+  resolvedPath: /home/j0pezz/Documents/GitHub/THOF-Rework/THOF/Library/PackageCache/com.unity.burst@6bb9aca3ef38
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -5936,6 +5646,7 @@ m_ResolvedPackages:
     - 1.8.29
     - 1.8.30
     compatible:
+    - 1.8.29
     - 1.8.30
     recommended: 1.8.30
     deprecated: []
@@ -5965,16 +5676,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 639202444216000000
+  datePublishedTicks: 639104670059890000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/burst.git
-    revision: bb334e47fbfa51086ada3fd51da8446e89853b1e
+    revision: ec0b605f793ec0a6605b712855ffbf1b97dedd08
     path: 
   unityLifecycle:
-    version: 1.8.30
+    version: 1.8.29
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5985,34 +5696,12 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: "{\"changelog\":\"### Fixed\\n- Fix error while verifying module from
-    invalid bitcast when converting nunit to float or double.\\n- Fixed cases where
-    the Burst Inspector could jitter when moving the divider.\\n- Fixed that using
-    a Bursted function pointer as argument to a method directly could cause a compiler
-    error\\n- Fixed Burst AOT builds for Embedded Linux and QNX when using Build
-    Profiles: Burst now reads the active profile\u2019s architecture instead of a
-    stale editor setting, preventing sysroot/linker failures (e.g. x64 SDK with aarch64
-    target) in batchmode and CI.\\n- Atomics were not generated when target web platform
-    with threading enabled.\\n- Fixed a race between Burst and the Editor compilation
-    pipeline that could surface as a `Failed to find entry-points` error.\\n- Burst
-    could crash if Very Large static readonly data happened to be compiled in such
-    a way that it would result in a direct store of the array. Now, the very large
-    data is memmoved instead.\\n- Web Player would crash if targeting wasm and the
-    entities package is present.\\n- Very large constants could cause Burst to crash
-    when compiling for WebAssembly\\n\\n### Changed\\n- Changed the default LLVM
-    version to 21.\\n- The minimum required Linux version to use Burst in the Unity
-    Editor is now Ubuntu 18.04 or equivalent.\\n- Changed minimum Editor version
-    to 6.0\\n- `[IgnoreWarning(1371)]` applied to a `[BurstDiscard]` method now suppresses
-    the discarded-call warning for the calls discarded along with it, instead of
-    having to annotate every caller.\\n\\n### Removed\\n- Removed support for LLVM
-    10, 15, 16, 17.\\n\\n### Known Issues\\n- Windows Smart App Control or WDAC policies
-    may block JIT-compiled libraries at load time. Burst now logs a warning in such
-    cases and deletes the affected library, which will be recompiled so Burst can
-    attempt loading it again.\\n\\n### Added\\n- Support for Wasm64 target\\n- Added
-    `ButtonFlowNewLineTest` editor test to verify that the Burst Inspector button
-    bar wraps to a new line when the window is narrow, and fits on a single line
-    when the window is wide.\\n- Added a Restart Now button to the dialog shown when
-    the Burst package is removed or updated.\"}"
+  upmReserved: '{"changelog":"### Fixed\n- Fixed that types implementing interfaces
+    that define methods with the same name (like `IFoo.Run()` and `IBar.Run()`) would
+    cause Burst to always only pick one of them when resolving calls to either.\n-
+    Fixed cases where Burst could be stripped from player builds with high managed
+    stripping enabled when Burst is only used through the `[BurstCompile]` attribute.\n\n###
+    Changed\n- Updated Burst''s internal version of Cecil."}'
   signature:
     status: 1
     reason: Signature is ok
@@ -6026,11 +5715,11 @@ m_ResolvedPackages:
     errorCode: 
   assetStore:
     productId: 
-  fingerprint: 2f3d916873ea867ff077372df3fe42447ba7d4c6
+  fingerprint: 6bb9aca3ef382e98bd0c1e4ab5fc74380c16095f
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.8.30
-    minimumUnityVersion: 6000.0
+    minimumPackageVersion: 1.8.29
+    minimumUnityVersion: 2022.3
   compliance:
     status: 0
     violation:
@@ -6305,4 +5994,4 @@ m_ResolvedPackages:
       scopePatternExpression: 
       message: 
       readMoreLink: 
-m_BuiltInPackagesHash: f02f4b922273f4e9f05c382e47105354e5d8916f
+m_BuiltInPackagesHash: e12ac5b6819ac42f58cccfff01d5d64a20fb8b2a

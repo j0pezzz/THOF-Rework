@@ -1,6 +1,7 @@
 using System;
 using Internal.Enums;
 using Internal.Structures;
+using Runtime.Input;
 using UnityEngine;
 using UnityEngine.UI;
 using EventHandler = Internal.EventHandler;
@@ -48,8 +49,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        _movement.x = Input.GetAxisRaw("Horizontal");
-        _movement.y = Input.GetAxisRaw("Vertical");
+        _movement.x = GameData.Instance.inputActions.FindActionMap("Player Movement").FindAction("Move").ReadValue<Vector2>().x;
+        _movement.y = GameData.Instance.inputActions.FindActionMap("Player Movement").FindAction("Move").ReadValue<Vector2>().y;
+        
+        //TODO: create separate animation script where we handle this.
         animator.SetFloat("Horizontal", _movement.x);
         animator.SetFloat("Vertical", _movement.y);
         animator.SetFloat("Speed", _movement.sqrMagnitude);
@@ -65,7 +68,7 @@ public class PlayerController : MonoBehaviour
         // If we are near an enemy and not yet in action.
         if (!nearEnemy || inAction) return;
 
-        if (!Input.GetKeyDown(KeyCode.E)) return;
+        if (!InputHandler.WasInteractPressed()) return;
         
         inAction = true;
         UIReferences.Instance.ShowInteract(false);
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
     // we could have a door script which has all the positions and we just get the positions from there or something.
     void Door()
     {
-        if (canGoIn && Input.GetKeyDown(KeyCode.E))
+        if (canGoIn && InputHandler.WasInteractPressed())
         {
             if (!in1)
             {
@@ -102,7 +105,7 @@ public class PlayerController : MonoBehaviour
             }  
         }
 
-        if (!canGoOut || !Input.GetKeyDown(KeyCode.E)) return;
+        if (!canGoOut || !InputHandler.WasInteractPressed()) return;
 
         if (!in1) return;
         

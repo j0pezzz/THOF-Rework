@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Runtime.Input;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
@@ -18,10 +19,9 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePause();
-        }
+        if (!InputHandler.WasPausePressed()) return;
+        
+        TogglePause();
     }
 
     public void TogglePause()

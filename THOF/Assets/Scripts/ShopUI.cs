@@ -14,6 +14,7 @@ public class ShopUI : MonoBehaviour
     ShopItem _shopItem;
     private List<ShopItem> _items;
     private readonly Dictionary<string, GameObject> _cacheUI = new();
+    private ShopType _currentShop = ShopType.None;
 
     private void Start()
     {
@@ -28,8 +29,6 @@ public class ShopUI : MonoBehaviour
         EventHandler.OnEnterShop -= OnEnterShop;
         EventHandler.OnExitShop -= OnExitShop;
     }
-
-    private ShopType _currentShop = ShopType.None;
 
     void OnEnterShop(ShopType shopType)
     {
@@ -47,7 +46,7 @@ public class ShopUI : MonoBehaviour
     {
         if (!PlayerController.Instance.inShop) return;
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (GameData.Instance.inputActions.FindActionMap("UI").FindAction("Interact").WasPressedThisFrame())
         {
             ToggleUI();
         }
@@ -136,7 +135,6 @@ public class ShopUI : MonoBehaviour
     public bool IsOpen() => _isOpen;
 
     private static ShopUI _instance;
-
     public static ShopUI Instance
     {
         get

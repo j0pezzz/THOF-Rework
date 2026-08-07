@@ -75,7 +75,7 @@ public class ChestUI : MonoBehaviour
     {
         if (!_canOpen) return;
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (GameData.Instance.inputActions.FindActionMap("UI").FindAction("Interact").WasPressedThisFrame())
         {
             ToggleUI();
         }

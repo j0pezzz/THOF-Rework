@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Internal.Structures.UI;
+using Runtime.Input;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,11 +27,11 @@ public class InventoryUI : MonoBehaviour
     Window _currentWindow;
     Window _currentInventoryWindow;
 
-    private Dictionary<string, GameObject> _cacheUI = new();
+    private readonly Dictionary<string, GameObject> _cacheUI = new();
 
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Tab)) return;
+        if (!InputHandler.WasInventoryPressed()) return;
         
         CheckItems();
         ToggleUI();

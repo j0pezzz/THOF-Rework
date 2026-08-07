@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220a334e572d9d84082e61fbb81a860f, type: 3}
   m_Name: Game Data
   m_EditorClassIdentifier: Assembly-CSharp::GameData
+  inputActions: {fileID: -944628639613478452, guid: e5b481d26292d1c2bb699ed1acb9fdaa, type: 3}
   shopItems:
   - {fileID: 11400000, guid: 40a82abf59db8824e84ed7ea2062bdda, type: 2}
   - {fileID: 11400000, guid: 92a27db8639f25f4a95d1e3a86c08e3a, type: 2}
